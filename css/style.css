@@ -41,6 +41,11 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 30px;
   box-sizing: border-box; }
+  @media (max-width: 1024px) {
+    body {
+      padding-bottom: 10px;
+      height: 100vh;
+      overflow: hidden; } }
 
 header {
   position: relative;
@@ -125,6 +130,9 @@ header {
     line-height: 33px;
     text-align: center;
     color: #FFFFFF; }
+    @media (max-width: 1024px) {
+      .image-big .text-box {
+        left: 3.73%; } }
   .image-big .btn-content-large {
     display: inline-block;
     border: 1px solid #ffffff;
@@ -155,6 +163,9 @@ header {
     line-height: 28px;
     text-align: center;
     color: #FFFFFF; }
+    @media (max-width: 1024px) {
+      .image-big-aside-1 .text-box {
+        left: 62.45%; } }
   .image-big-aside-1 .btn-content-aside-1 {
     display: inline-block;
     border: 1px solid #ffffff;
@@ -185,6 +196,9 @@ header {
     line-height: 28px;
     text-align: center;
     color: #FFFFFF; }
+    @media (max-width: 1024px) {
+      .image-big-aside-2 .text-box {
+        left: 81.12%; } }
   .image-big-aside-2 .btn-content-aside-2 {
     display: inline-block;
     font-family: Roboto;
@@ -207,6 +221,9 @@ header {
   font-weight: normal;
   font-size: 24px;
   line-height: 28px; }
+  @media (max-width: 1024px) {
+    .image-square {
+      height: calc(calc(100vh - 60px) * 0.40 - 65px); } }
   .image-square-1 {
     background-color: #CCCCCC; }
   .image-square-2 {
@@ -217,12 +234,24 @@ header {
     color: #ffffff;
     position: absolute;
     top: 86%; }
+    @media (max-width: 1024px) {
+      .image-square-text-box {
+        top: 79%; } }
     .image-square-text-box-1 {
       left: 8.04%; }
+      @media (max-width: 1024px) {
+        .image-square-text-box-1 {
+          left: 6.33%; } }
     .image-square-text-box-2 {
       left: 43.7%; }
+      @media (max-width: 1024px) {
+        .image-square-text-box-2 {
+          left: 42.63%; } }
     .image-square-text-box-3 {
       left: 75.65%; }
+      @media (max-width: 1024px) {
+        .image-square-text-box-3 {
+          left: 74.17%; } }
 
 @media (max-width: 1024px) {
   .sidebar {
@@ -325,3 +354,33 @@ header {
 .social .social-icons-img {
   width: auto;
   height: 28px; }
+
+.footer-section {
+  position: relative;
+  display: none; }
+  @media (max-width: 1024px) {
+    .footer-section {
+      display: inherit; } }
+
+.divider {
+  border-top: 1px solid #C8A985; }
+
+.footer-content {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 10px;
+  color: #000000; }
+  .footer-content-links {
+    left: 75%;
+    position: absolute;
+    text-align: right; }
+    .footer-content-links-list {
+      list-style: none;
+      text-emphasis: none; }
+      .footer-content-links-list li {
+        display: inline-block; }
+      .footer-content-links-list-1 {
+        padding-right: 15px; }

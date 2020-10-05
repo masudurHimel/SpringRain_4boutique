@@ -13,6 +13,12 @@
         font-family: "Roboto", sans-serif;
         padding: 30px;
         box-sizing: border-box;
+        @include respond(tab-landscape) {
+            padding-bottom: 10px;
+            // margin-bottom: -5px;
+            height: 100vh;
+            overflow: hidden;
+        }
     }
     
     header {
@@ -91,6 +97,7 @@
             left: 0px;
             width: 100%;
         }
+        // display: none;
     }
     
     .image-big {
@@ -109,6 +116,9 @@
             line-height: 33px;
             text-align: center;
             color: #FFFFFF;
+            @include respond(tab-landscape) {
+                left: 3.73%;
+            }
         }
         .btn-content-large {
             display: inline-block;
@@ -142,6 +152,9 @@
             line-height: 28px;
             text-align: center;
             color: #FFFFFF;
+            @include respond(tab-landscape) {
+                left: 62.45%;
+            }
         }
         .btn-content-aside-1 {
             display: inline-block;
@@ -175,6 +188,9 @@
             line-height: 28px;
             text-align: center;
             color: #FFFFFF;
+            @include respond(tab-landscape) {
+                left: 81.12%;
+            }
         }
         .btn-content-aside-2 {
             display: inline-block;
@@ -200,6 +216,9 @@
         font-weight: normal;
         font-size: 24px;
         line-height: 28px;
+        @include respond(tab-landscape) {
+            height: calc(#{$content-height} * 0.40 - 65px);
+        }
         &-1 {
             background-color: #CCCCCC;
             // position: absolute;
@@ -215,15 +234,27 @@
         &-text-box {
             color: #ffffff;
             position: absolute;
-            top: 86%; //726px;
+            top: 86%; //726px; 
+            @include respond(tab-landscape) {
+                top: 79%;
+            }
             &-1 {
                 left: 8.04%; //92.5px;
+                @include respond(tab-landscape) {
+                    left: 6.33%;
+                }
             }
             &-2 {
                 left: 43.7%; //504px;
+                @include respond(tab-landscape) {
+                    left: 42.63%;
+                }
             }
             &-3 {
                 left: 75.65%; //870px;
+                @include respond(tab-landscape) {
+                    left: 74.17%;
+                }
             }
         }
     }
@@ -353,5 +384,42 @@
         .social-icons-img {
             width: auto;
             height: 28px;
+        }
+    }
+    
+    .footer-section {
+        position: relative;
+        display: none;
+        @include respond(tab-landscape) {
+            display: inherit;
+        }
+    }
+    
+    .divider {
+        border-top: 1px solid #C8A985;
+    }
+    
+    .footer-content {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 14px;
+        margin-top: 10px;
+        color: #000000;
+        &-links {
+            left: 75%;
+            position: absolute;
+            text-align: right;
+            &-list {
+                list-style: none;
+                text-emphasis: none;
+                li {
+                    display: inline-block;
+                }
+                &-1 {
+                    padding-right: 15px;
+                }
+            }
         }
     }
