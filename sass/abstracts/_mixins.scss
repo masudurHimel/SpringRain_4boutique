@@ -5,3 +5,12 @@
         display: table;
     }
 }
+
+//for responsiveness
+@mixin respond($breakpoint) {
+    @if $breakpoint==tab-landscape {
+        @media (max-width: 1024px) {
+            @content
+        }
+    }
+}
