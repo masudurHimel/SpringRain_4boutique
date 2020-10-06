@@ -393,7 +393,7 @@ header {
   .navigation_checkbox {
     display: none; }
   .navigation_button {
-    background-color: orangered;
+    background-color: white;
     border-radius: 20%;
     height: 33px;
     width: 30px;
@@ -410,7 +410,8 @@ header {
     left: 35px;
     position: fixed;
     background-color: black;
-    z-index: 1000; }
+    z-index: 1000;
+    transition: transform 0.1s; }
   .navigation_nav {
     top: 0;
     left: 0;
@@ -420,9 +421,8 @@ header {
     list-style: none;
     text-align: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 12.92%;
+    left: 40.8%;
     z-index: 1500; }
   .navigation_item {
     margin-bottom: 4px; }
@@ -443,3 +443,108 @@ header {
     transform: scale(140); }
   .navigation_checkbox:checked ~ .navigation_nav {
     display: inherit; }
+  .navigation_checkbox:checked ~ .navigation_button {
+    background-color: black; }
+  .navigation_icon {
+    margin-top: 16px;
+    margin-left: -8px; }
+    .navigation_icon, .navigation_icon::before, .navigation_icon::after {
+      width: 23px;
+      height: 1px;
+      background-color: black;
+      display: inline-block; }
+    .navigation_icon::before, .navigation_icon::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      transition: all .2s; }
+    .navigation_icon::before {
+      top: 10px; }
+    .navigation_icon::after {
+      top: 22px; }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon {
+    background-color: transparent; }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+    top: 15px;
+    transform: rotate(135deg);
+    background-color: #C8A985; }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+    top: 15px;
+    transform: rotate(-135deg);
+    background-color: #C8A985; }
+  .navigation-logo-box {
+    position: absolute;
+    z-index: 1500;
+    top: 30px;
+    left: 64px; }
+  .navigation-logo {
+    height: 20px; }
+  .navigation-user-icon {
+    position: absolute;
+    width: auto;
+    top: 30px;
+    left: calc(87.9% - 30px);
+    text-decoration: none;
+    z-index: 1500; }
+    .navigation-user-icon li {
+      display: inline-block;
+      height: 25px; }
+  .navigation-icon-mod {
+    height: 25px; }
+    .navigation-icon-mod-t1 {
+      margin-right: 10px; }
+  .navigation-icon-bag-text {
+    position: absolute;
+    top: 7px;
+    left: 98.8%;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    color: #C8A985; }
+  .navigation-newsletter {
+    color: white;
+    margin-top: 114px; }
+    .navigation-newsletter-2 {
+      margin-top: 2px;
+      color: white; }
+  .navigation-newsletter-box {
+    color: white;
+    margin-top: 50px; }
+    .navigation-newsletter-box input[type=email] {
+      position: absolute;
+      top: 89%;
+      left: 0%;
+      width: 170px;
+      height: 25px;
+      border-radius: 0px;
+      background-color: black;
+      border: 1px solid #CCCCCC; }
+    .navigation-newsletter-box ::placeholder {
+      padding: 5px 131.5px 5px 9.5px;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+      color: #CCCCCC; }
+  .navigation-newsletter-input-submission {
+    background-color: #CCCCCC;
+    position: absolute;
+    width: 23px;
+    height: 25px;
+    top: 89%;
+    left: 84.5%; }
+    .navigation-newsletter-input-submission-arrow {
+      position: absolute;
+      width: 12.04px;
+      height: 7.07px;
+      left: 5px;
+      top: 8.5px; }
+  .navigation-logo-social {
+    display: inline-block; }
+  .navigation-social-icons-img {
+    height: 28px;
+    width: 28px;
+    display: inline-block; }
