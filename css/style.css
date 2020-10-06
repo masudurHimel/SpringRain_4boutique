@@ -384,3 +384,54 @@ header {
         display: inline-block; }
       .footer-content-links-list-1 {
         padding-right: 15px; }
+
+.navigation {
+  display: none; }
+  @media (max-width: 1024px) {
+    .navigation {
+      display: inherit; } }
+  .navigation_checkbox {
+    display: none; }
+  .navigation_button {
+    background-color: orangered;
+    border-radius: 20%;
+    height: 33px;
+    width: 30px;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 2000;
+    text-align: center; }
+  .navigation_background {
+    height: 15px;
+    width: 15px;
+    border-radius: 20%;
+    top: 30px;
+    left: 35px;
+    position: fixed;
+    background-color: black;
+    z-index: 1000; }
+  .navigation_nav {
+    top: 0;
+    left: 0;
+    z-index: 1500; }
+  .navigation_list {
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1500; }
+  .navigation_item {
+    margin-bottom: 4px; }
+  .navigation_link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF; }
+  .navigation .item-section-divider {
+    margin: 24px; }
