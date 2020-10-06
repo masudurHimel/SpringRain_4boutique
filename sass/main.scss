@@ -461,6 +461,7 @@ header {
         top: 0;
         left: 0;
         z-index: 1500;
+        display: none;
     }
     &_list {
         list-style: none;
@@ -475,15 +476,29 @@ header {
         margin-bottom: 4px;
     }
     &_link {
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+            transition: all 0.2s;
+        }
+        &:hover,
+        &:active {
+            color: #C8A985;
+        }
     }
     .item-section-divider {
         margin: 24px;
+    }
+    &_checkbox:checked~&_background {
+        transform: scale(140);
+    }
+    &_checkbox:checked~&_nav {
+        display: inherit;
     }
 }

@@ -414,7 +414,8 @@ header {
   .navigation_nav {
     top: 0;
     left: 0;
-    z-index: 1500; }
+    z-index: 1500;
+    display: none; }
   .navigation_list {
     list-style: none;
     text-align: center;
@@ -425,13 +426,20 @@ header {
     z-index: 1500; }
   .navigation_item {
     margin-bottom: 4px; }
-  .navigation_link {
+  .navigation_link:link, .navigation_link:visited {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    transition: all 0.2s; }
+  .navigation_link:hover, .navigation_link:active {
+    color: #C8A985; }
   .navigation .item-section-divider {
     margin: 24px; }
+  .navigation_checkbox:checked ~ .navigation_background {
+    transform: scale(140); }
+  .navigation_checkbox:checked ~ .navigation_nav {
+    display: inherit; }
