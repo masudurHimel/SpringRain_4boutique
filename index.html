@@ -11,29 +11,78 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="image-icon-open"><img src="img/Icon open.png" /></div>
-      <div class="header-logo"><img src="img/Logo.png" /></div>
-      <div class="user-tool">
-        <ul>
-          <li>
-            <a href="#"><img src="img/Icon search.png" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/Icon heart.png" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/Icon bag.png" /></a>
-          </li>
-        </ul>
-      </div>
-    </header>
+    <script>
+      $(document).ready(function() {
+          $("#wrapper").click(function() {
+              $(".menu").toggleClass("close");
+              $(".main").toggleClass("close1");
+              $(".sidebar").toggleClass("close2");
+              $(".footer-menu").toggleClass("close3");
+              $(".container-menu").toggleClass("close2");
+              $(".tablet-landscape-menu").toggleClass("close2");
+              $(".table-landscape-header").toggleClass("close2");
 
-    <section class="container">
+
+          });
+      });
+
+  </script>
+
+    <div>
+      <div class="table-landscape-header">
+        <header>
+          <div id="wrapper">
+            <div class="main-item menu">
+                <span class="line line01"></span>
+                <span class="line line02"></span>
+                <span class="line line03"></span>
+            </div>
+        </div>
+        
+          <div class="header-logo"><img src="img/Logo.png" /></div>
+          <div class="user-tool">
+            <ul>
+              <li>
+                <a href="#"><img src="img/Icon search.png" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/Icon heart.png" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/Icon bag.png" /></a>
+              </li>
+            </ul>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="tablet-landscape-menu">
+      <header>
+
+        <div class="header-logo"><img src="img/Logo-menu.png" /></div>
+        <div class="user-tool">
+          <ul>
+            <li>
+              <a href="#"><img src="img/Icon search-menu.png" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/Icon heart-menu.png" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/Icon bag menu.png" /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <section class="container container-menu">
       <div class="sidebar">
-        <img src="img/Logo.png" />
+        <img src="img/Logo.png" class="sidebar-logo" />
         <nav class="nav">
           <ul>
             <li class="space"><a href="#" class="active">Home</a></li>
@@ -50,27 +99,32 @@
           <div class="link">
             <p>
               Language:
-              <a href="#"> English</a>
-              <img
-                src="img/Icon arrow down.png"
-                alt="icon link"
-                id="link-icon"
-              /><br />
+              <a href="#">
+                English
+                <img
+                  src="img/Icon arrow down.png"
+                  alt="icon link"
+                  id="link-icon" /></a
+              ><br />
               Store Locator
             </p>
           </div>
           <div class="newsletter">
             <p>NewsLetter</p>
             <form class="form">
-              <input type="email" placeholder="  Email" />
-              <a href="#"><img src="img/Icon arrows slim right.png" /></a>
+              <input type="email" placeholder="  Email" id="input" />
+              <a href="#"
+                ><img
+                  src="img/Icon arrows slim right-menu.png"
+                  id="icon-arrow-slim"
+              /></a>
             </form>
           </div>
           <div class="social">
-            <i class="ion-social-facebook-outline"></i>
-            <i class="ion-social-twitter-outline"></i>
-            <i class="ion-social-googleplus-outline"></i>
-            <i class="ion-social-tumblr-outline"></i>
+            <a href="#"><img src="img/Shape fb.png" id="social-img" /></a>
+            <a href="#"><img src="img/Shape g+.png" id="social-img" /></a>
+            <a href="#"><img src="img/Shape tm.png" id="social-img" /></a>
+            <a href="#"><img src="img/Shape tw.png" id="social-img" /></a>
           </div>
         </nav>
       </div>
@@ -111,5 +165,16 @@
         </div>
       </div>
     </section>
+    <footer class="footer-menu">
+      <p>© 2015 4BOUTIQUE THEME. ALL RIGHTS RESERVED.</p>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">FAQS</a></li>
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
