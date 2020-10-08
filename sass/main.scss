@@ -1,571 +1,914 @@
-    @import "abstracts/variables";
-    @import "abstracts/mixins";
-    @import "layout/grid";
-    *,
-    *::before,
-    *::after {
-        padding: 0;
-        margin: 0;
-        box-sizing: inherit;
-    }
-    
-    body {
-        font-family: "Roboto", sans-serif;
-        padding: 30px;
-        box-sizing: border-box;
-        @include respond(tab-landscape) {
-            padding-bottom: 10px;
-            height: 100vh;
-            overflow: hidden; //need to check 
-            @include respond(tab-port) {
-                // overflow: hidden;
-            }
-        }
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "layout/grid";
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    padding: 30px;
+    box-sizing: border-box;
+    @include respond(tab-landscape) {
+        padding-bottom: 10px;
+        height: 100vh;
+        overflow: hidden; //need to check 
         @include respond(tab-port) {
-            padding: 0px;
-            padding-bottom: 0px;
-        }
-    }
-    
-    header {
-        position: relative;
-        max-width: 170px;
-        margin-right: 45px;
-        @include respond(tab-landscape) {
-            max-width: 100%; //964px;
-            margin-right: 0px;
-        }
-        @include respond(tab-port) {
-            z-index: 500;
-        }
-    }
-    
-    .logo-box {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        @include respond(tab-landscape) {
-            top: 0px;
-            left: 34px;
-        }
-        @include respond(tab-port) {
-            top: 23px;
-            left: 54px;
+            // overflow: hidden;
         }
         @include respond(mobile) {
-            top: 15px;
-            left: 92px;
+            // overflow-y: visible;
         }
     }
-    
-    .logo {
-        height: 25px;
-        @include respond(tab-landscape) {
-            height: 20px;
-        }
-        @include respond(tab-port) {
-            display: none;
-        }
-        &-tab-portrait {
-            display: none;
-            @include respond(tab-port) {
-                display: inherit;
-                height: 20px;
-            }
-        }
+    @include respond(tab-port) {
+        padding: 0px;
+        padding-bottom: 0px;
     }
-    
-    .user-icon {
-        position: absolute;
-        width: auto;
+}
+
+header {
+    position: relative;
+    max-width: 170px;
+    margin-right: 45px;
+    @include respond(tab-landscape) {
+        max-width: 100%; //964px;
+        margin-right: 0px;
+    }
+    @include respond(tab-port) {
+        z-index: 500;
+    }
+}
+
+.logo-box {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    @include respond(tab-landscape) {
         top: 0px;
-        left: 87.9%;
-        @include respond(tab-port) {
-            top: 20px;
-            left: 83%;
-        }
-        @include respond(mobile) {
-            top: 13px;
-            left: 77.4%;
-        }
-        text-decoration: none;
-        li {
-            display: inline-block;
-            height: 25px;
-            .icon-mod {
-                height: 25px;
-                display: none;
-                @include respond(tab-landscape) {
-                    display: inherit;
-                }
-                @include respond(tab-port) {
-                    display: none;
-                }
-                &-t1 {
-                    margin-right: 10px;
-                    @include respond(mobile) {
-                        margin-right: 0px;
-                    }
-                }
-                &-tab-port {
-                    display: none;
-                    @include respond(tab-port) {
-                        display: inherit;
-                    }
-                }
-                &-mobile {
-                    @include respond(mobile) {
-                        position: absolute;
-                        right: 245px;
-                    }
-                }
-            }
-            .icon-bag-text {
-                position: absolute;
-                top: 7px;
-                left: 98.8%;
-                font-family: "Open Sans", sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 10px;
-                line-height: 14px;
-                color: #333333;
-                display: none;
-                @include respond(tab-landscape) {
-                    display: inherit;
-                }
-                @include respond(tab-port) {
-                    color: white;
-                }
-            }
-        }
+        left: 34px;
     }
-    
-    .main-content {
-        position: relative;
-        width: $content-width;
-        height: $content-height;
-        left: 230px;
-        color: black;
-        @include respond(tab-landscape) {
-            top: 50px;
-            left: 0px;
-            width: 100%;
-        }
-        @include respond(tab-port) {
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            overflow-x: hidden;
-            height: calc(100vh - 30px);
-        }
-        // display: none;
+    @include respond(tab-port) {
+        top: 23px;
+        left: 54px;
     }
-    
-    .scroll {
+    @include respond(mobile) {
+        top: 15px;
+        left: 92px;
+    }
+}
+
+.logo {
+    height: 25px;
+    @include respond(tab-landscape) {
+        height: 20px;
+    }
+    @include respond(tab-port) {
+        display: none;
+    }
+    &-tab-portrait {
         display: none;
         @include respond(tab-port) {
             display: inherit;
+            height: 20px;
         }
     }
-    
-    .image-slider {
-        background-color: #333333;
-        height: calc(#{$content-height} * 0.46);
-        @include respond(mobile) {
-            height: 640px;
-        }
-        .slider-text-box {
-            position: absolute;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            width: 413px;
-            height: 38px;
-            left: 21.5%;
-            top: 17.08%;
-            color: #FFFFFF;
-            text-align: center;
-            @include respond(mobile) {
-                left: 51.5px;
-                top: 244px;
-            }
-            &-header {
-                font-size: 32px;
-                line-height: 37px;
-            }
-            &-detail {
-                font-size: 16px;
-                line-height: 20px;
-                @include respond(mobile) {
-                    display: none;
-                }
-            }
-            .slide-indicator {
-                height: 12px;
-                margin-top: 6.05%;
-                @include respond(mobile) {
-                    margin-top: 108px;
-                }
-            }
-            .slide-arrow {
-                height: 20px;
-                margin-top: 20%;
-                @include respond(mobile) {
-                    margin-top: 65px;
-                }
-            }
-            .btn-content-sliding {
-                display: inline-block;
-                border: 1px solid #ffffff;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
-                padding: 5px 9px;
-                margin-top: 20px;
-                // position: absolute;  
-                left: 362px;
-                top: 287px;
-                font-size: 12px;
-                line-height: 14px;
-                color: #FFFFFF;
-            }
-            @include respond(mobile) {
-                width: 217px;
-                height: 76px;
-                // left: 51.5px;
-                // top: 277px;
-                font-size: 32px;
-                line-height: 37px;
-                text-align: center;
-                color: #FFFFFF;
-            }
-        }
+}
+
+.user-icon {
+    position: absolute;
+    width: auto;
+    top: 0px;
+    left: 87.9%;
+    @include respond(tab-port) {
+        top: 20px;
+        left: 83%;
     }
-    
-    .image-big {
-        background-color: #999999;
-        height: calc(#{$content-height} * 0.56);
-        @include respond(tab-port) {
-            height: 320px;
-        }
-        @include respond(mobile) {
-            height: 229px;
-        }
-        .text-box {
-            position: absolute;
-            width: 285px;
-            height: 66px;
-            top: $image-big-text-box-top;
-            left: 13.13%;
-            // transform: translate(-50%, -50%);
-            font-style: normal;
-            font-weight: normal;
-            font-size: 28px;
-            line-height: 33px;
-            text-align: center;
-            color: #FFFFFF;
+    @include respond(mobile) {
+        top: 13px;
+        left: 77.4%;
+    }
+    text-decoration: none;
+    li {
+        display: inline-block;
+        height: 25px;
+        .icon-mod {
+            height: 25px;
+            display: none;
             @include respond(tab-landscape) {
-                left: 3.73%;
+                display: inherit;
             }
             @include respond(tab-port) {
-                top: 57.5%;
-                left: 9.7%;
+                display: none;
             }
-            @include respond(mobile) {
-                top: 717px;
-                left: 19.5px;
-                line-height: 28px;
+            &-t1 {
+                margin-right: 10px;
+                @include respond(mobile) {
+                    margin-right: 0px;
+                }
+            }
+            &-tab-port {
+                display: none;
+                @include respond(tab-port) {
+                    display: inherit;
+                }
+            }
+            &-mobile {
+                @include respond(mobile) {
+                    position: absolute;
+                    right: 245px;
+                }
             }
         }
-        .btn-content-large {
+        .icon-bag-text {
+            position: absolute;
+            top: 7px;
+            left: 98.8%;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 14px;
+            color: #333333;
+            display: none;
+            @include respond(tab-landscape) {
+                display: inherit;
+            }
+            @include respond(tab-port) {
+                color: white;
+            }
+        }
+    }
+}
+
+.main-content {
+    position: relative;
+    width: $content-width;
+    height: $content-height;
+    left: 230px;
+    color: black;
+    @include respond(tab-landscape) {
+        top: 50px;
+        left: 0px;
+        width: 100%;
+    }
+    @include respond(tab-port) {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow-x: hidden;
+        height: calc(100vh - 30px);
+    }
+    // display: none;
+}
+
+.scroll {
+    display: none;
+    @include respond(tab-port) {
+        display: inherit;
+    }
+}
+
+.image-slider {
+    background-color: #333333;
+    height: calc(#{$content-height} * 0.46);
+    @include respond(mobile) {
+        height: 640px;
+    }
+    .slider-text-box {
+        position: absolute;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        width: 413px;
+        height: 38px;
+        left: 21.5%;
+        top: 17.08%;
+        color: #FFFFFF;
+        text-align: center;
+        @include respond(mobile) {
+            left: 51.5px;
+            top: 244px;
+        }
+        &-header {
+            font-size: 32px;
+            line-height: 37px;
+        }
+        &-detail {
+            font-size: 16px;
+            line-height: 20px;
+            @include respond(mobile) {
+                display: none;
+            }
+        }
+        .slide-indicator {
+            height: 12px;
+            margin-top: 6.05%;
+            @include respond(mobile) {
+                margin-top: 108px;
+            }
+        }
+        .slide-arrow {
+            height: 20px;
+            margin-top: 20%;
+            @include respond(mobile) {
+                margin-top: 65px;
+            }
+        }
+        .btn-content-sliding {
             display: inline-block;
             border: 1px solid #ffffff;
             text-transform: uppercase;
             text-decoration: none;
-            color: #ffffff;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
+            padding: 5px 9px;
+            margin-top: 20px;
+            // position: absolute;  
+            left: 362px;
+            top: 287px;
             font-size: 12px;
             line-height: 14px;
-            padding: 5px 9px;
-            margin-top: 20px;
-        }
-    }
-    
-    .image-big-aside-1 {
-        background-color: #C8A985;
-        height: calc(((#{$content-height} * 0.56)/2) - 15px);
-        @include respond(tab-port) {
-            height: 160px;
+            color: #FFFFFF;
         }
         @include respond(mobile) {
-            height: 152px;
-        }
-        .text-box {
-            position: absolute;
-            width: 168px;
-            height: 56px;
-            left: 63.5%; //726px;
-            top: $image-big-aside-text-box-top;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 28px;
+            width: 217px;
+            height: 76px;
+            // left: 51.5px;
+            // top: 277px;
+            font-size: 32px;
+            line-height: 37px;
             text-align: center;
             color: #FFFFFF;
-            @include respond(tab-landscape) {
-                left: 62.45%;
-            }
-            @include respond(tab-port) {
-                top: 49%;
-                left: 61.2%;
-            }
-            @include respond(mobile) {
-                font-size: 20px;
-                line-height: 23px;
-                top: 908px;
-                left: 14px;
-            }
-        }
-        .btn-content-aside-1 {
-            display: inline-block;
-            border: 1px solid #ffffff;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #ffffff;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 12px;
-            padding: 5px 9px;
-            margin-top: 20px;
-            @include respond(tab-port) {
-                margin-top: 15px;
-            }
         }
     }
-    
-    .image-big-aside-2 {
-        background-color: #F0E3CC;
-        height: calc(((#{$content-height} * 0.56)/2) - 15px);
-        @include respond(tab-port) {
-            height: 160px;
-        }
-        @include respond(mobile) {
-            height: 151px;
-        }
-        .text-box {
-            position: absolute;
-            width: 164px;
-            height: 56px;
-            left: 82.8%; //953px;
-            top: $image-big-aside-text-2-box-top; //340px;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 28px;
-            text-align: center;
-            color: #FFFFFF;
-            @include respond(tab-landscape) {
-                left: 81.12%;
-            }
-            @include respond(tab-port) {
-                top: 66.3%;
-                left: 75.8%;
-            }
-            @include respond(mobile) {
-                font-size: 20px;
-                line-height: 23px;
-                top: 1058px;
-                left: 143px;
-            }
-        }
-        .btn-content-aside-2 {
-            display: inline-block;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 12px;
-            border: 1px solid #FFFFFF;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #FFFFFF;
-            padding: 5px 9px;
-            margin-top: 20px;
-            @include respond(tab-port) {
-                margin-top: 10px;
-            }
-        }
+}
+
+.image-big {
+    background-color: #999999;
+    height: calc(#{$content-height} * 0.56);
+    @include respond(tab-port) {
+        height: 320px;
     }
-    
-    .image-square {
-        height: calc((#{$content-height} - (#{$content-height} * 0.56)) - 30px);
+    @include respond(mobile) {
+        height: 229px;
+    }
+    .text-box {
+        position: absolute;
+        width: 285px;
+        height: 66px;
+        top: $image-big-text-box-top;
+        left: 13.13%;
+        // transform: translate(-50%, -50%);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 33px;
         text-align: center;
+        color: #FFFFFF;
+        @include respond(tab-landscape) {
+            left: 3.73%;
+        }
+        @include respond(tab-port) {
+            top: 57.5%;
+            left: 9.7%;
+        }
+        @include respond(mobile) {
+            top: 717px;
+            left: 19.5px;
+            line-height: 28px;
+        }
+    }
+    .btn-content-large {
+        display: inline-block;
+        border: 1px solid #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 5px 9px;
+        margin-top: 20px;
+    }
+}
+
+.image-big-aside-1 {
+    background-color: #C8A985;
+    height: calc(((#{$content-height} * 0.56)/2) - 15px);
+    @include respond(tab-port) {
+        height: 160px;
+    }
+    @include respond(mobile) {
+        height: 152px;
+    }
+    .text-box {
+        position: absolute;
+        width: 168px;
+        height: 56px;
+        left: 63.5%; //726px;
+        top: $image-big-aside-text-box-top;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
         @include respond(tab-landscape) {
-            height: calc(#{$content-height} * 0.40 - 65px);
+            left: 62.45%;
         }
         @include respond(tab-port) {
-            height: 240px;
+            top: 49%;
+            left: 61.2%;
         }
         @include respond(mobile) {
-            height: 297px;
+            font-size: 20px;
+            line-height: 23px;
+            top: 908px;
+            left: 14px;
+        }
+    }
+    .btn-content-aside-1 {
+        display: inline-block;
+        border: 1px solid #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        padding: 5px 9px;
+        margin-top: 20px;
+        @include respond(tab-port) {
+            margin-top: 15px;
+        }
+    }
+}
+
+.image-big-aside-2 {
+    background-color: #F0E3CC;
+    height: calc(((#{$content-height} * 0.56)/2) - 15px);
+    @include respond(tab-port) {
+        height: 160px;
+    }
+    @include respond(mobile) {
+        height: 151px;
+    }
+    .text-box {
+        position: absolute;
+        width: 164px;
+        height: 56px;
+        left: 82.8%; //953px;
+        top: $image-big-aside-text-2-box-top; //340px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        @include respond(tab-landscape) {
+            left: 81.12%;
+        }
+        @include respond(tab-port) {
+            top: 66.3%;
+            left: 75.8%;
+        }
+        @include respond(mobile) {
+            font-size: 20px;
+            line-height: 23px;
+            top: 1058px;
+            left: 143px;
+        }
+    }
+    .btn-content-aside-2 {
+        display: inline-block;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        border: 1px solid #FFFFFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 5px 9px;
+        margin-top: 20px;
+        @include respond(tab-port) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.image-square {
+    height: calc((#{$content-height} - (#{$content-height} * 0.56)) - 30px);
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    @include respond(tab-landscape) {
+        height: calc(#{$content-height} * 0.40 - 65px);
+    }
+    @include respond(tab-port) {
+        height: 240px;
+    }
+    @include respond(mobile) {
+        height: 297px;
+    }
+    &-1 {
+        background-color: #CCCCCC;
+    }
+    &-2 {
+        background-color: #F2F2F2;
+    }
+    &-3 {
+        background-color: #CCCCCC;
+    }
+    &-text-box {
+        color: #ffffff;
+        position: absolute;
+        top: 86%; //726px; 
+        @include respond(tab-landscape) {
+            top: 79%;
+        }
+        @include respond(tab-port) {
+            top: 92.4%
         }
         &-1 {
-            background-color: #CCCCCC;
-        }
-        &-2 {
-            background-color: #F2F2F2;
-        }
-        &-3 {
-            background-color: #CCCCCC;
-        }
-        &-text-box {
-            color: #ffffff;
-            position: absolute;
-            top: 86%; //726px; 
+            left: 8.04%; //92.5px;
             @include respond(tab-landscape) {
-                top: 79%;
+                left: 6.33%;
             }
             @include respond(tab-port) {
-                top: 92.4%
+                left: 6.9%;
+            }
+            @include respond(mobile) {
+                top: 1365px;
+                left: 71px;
+            }
+        }
+        &-2 {
+            left: 43.7%; //504px;
+            @include respond(tab-landscape) {
+                left: 42.63%;
+            }
+            @include respond(tab-port) {
+                left: 42.4%;
+            }
+            @include respond(mobile) {
+                top: 1660px;
+                left: 90px;
+            }
+        }
+        &-3 {
+            left: 75.65%; //870px;
+            @include respond(tab-landscape) {
+                left: 74.17%;
+            }
+            @include respond(tab-port) {
+                left: 72.5%;
+            }
+            @include respond(mobile) {
+                top: 1965px;
+                left: 63px;
+            }
+        }
+    }
+}
+
+.sidebar {
+    @include respond(tab-landscape) {
+        display: none;
+    }
+}
+
+.nav-bar {
+    position: absolute;
+    top: 29.44%; //265px;
+    left: 3.125%; //45px;
+}
+
+.nav-list {
+    list-style: none;
+    &-section-break {
+        margin-top: 25px;
+    }
+}
+
+.btn-nav {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        // /* identical to box height */
+        color: #999999;
+        transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+        color: #C8A985;
+    }
+}
+
+.links {
+    position: absolute;
+    top: 76.4%; //688px;
+    left: 3.125%; //45px;
+    &-header {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        color: #000000;
+        &-item:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    &-arrow {
+        margin-left: 9px;
+    }
+}
+
+.temp-gray {
+    color: #999999;
+}
+
+.newsletter-box {
+    position: absolute;
+    top: 85.33%; //768px;
+    left: 3.125%; //45px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.newsletter-input {
+    position: absolute;
+    top: 87.4%; //787px
+    left: 3.125%; //45px
+    input[type=email] {
+        margin-top: 7px;
+        width: 170px;
+        height: 25px;
+        border-radius: 0px;
+        border: 1px solid #CCCCCC;
+    }
+     ::placeholder {
+        padding: 5px 131.5px 5px 9.5px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        color: #999999;
+    }
+}
+
+.newsletter-input-submission {
+    background-color: #CCCCCC;
+    position: absolute;
+    width: 23px;
+    height: 25px;
+    top: 24%;
+    left: 86.5%;
+    &-arrow {
+        position: absolute;
+        width: 12.04px;
+        height: 7.07px;
+        left: 5px;
+        top: 8.5px;
+    }
+}
+
+.social {
+    .social-icons-list {
+        position: absolute;
+        list-style: none;
+        top: 91.9%; //827px
+        left: 3.125%; //45px;
+        margin-top: 10px;
+        li {
+            display: inline-block;
+        }
+    }
+    .social-icons-img {
+        width: auto;
+        height: 28px;
+    }
+}
+
+.footer-section {
+    position: relative;
+    display: none;
+    @include respond(tab-landscape) {
+        display: inherit;
+    }
+    @include respond(tab-port) {
+        padding-top: 5px;
+    }
+    @include respond(mobile) {
+        display: inherit;
+    }
+}
+
+.divider {
+    border-top: 1px solid #C8A985;
+}
+
+.footer-content {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 5px;
+    color: #000000;
+    &-links {
+        left: 75%;
+        position: absolute;
+        text-align: right;
+        &-list {
+            list-style: none;
+            text-emphasis: none;
+            li {
+                display: inline-block;
             }
             &-1 {
-                left: 8.04%; //92.5px;
-                @include respond(tab-landscape) {
-                    left: 6.33%;
-                }
-                @include respond(tab-port) {
-                    left: 6.9%;
-                }
-                @include respond(mobile) {
-                    top: 1365px;
-                    left: 71px;
-                }
-            }
-            &-2 {
-                left: 43.7%; //504px;
-                @include respond(tab-landscape) {
-                    left: 42.63%;
-                }
-                @include respond(tab-port) {
-                    left: 42.4%;
-                }
-                @include respond(mobile) {
-                    top: 1660px;
-                    left: 90px;
-                }
-            }
-            &-3 {
-                left: 75.65%; //870px;
-                @include respond(tab-landscape) {
-                    left: 74.17%;
-                }
-                @include respond(tab-port) {
-                    left: 72.5%;
-                }
-                @include respond(mobile) {
-                    top: 1965px;
-                    left: 63px;
-                }
+                padding-right: 10px;
             }
         }
-    }
-    
-    .sidebar {
-        @include respond(tab-landscape) {
-            display: none;
+        @include respond(tab-port) {
+            left: 69%;
         }
     }
-    
-    .nav-bar {
+}
+
+.navigation {
+    display: none;
+    @include respond(tab-landscape) {
+        display: inherit;
+    }
+    @include respond(mobile) {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    &_checkbox {
+        display: none;
+    }
+    &_button {
+        background-color: white;
+        height: 33px;
+        width: 30px;
         position: absolute;
-        top: 29.44%; //265px;
-        left: 3.125%; //45px;
-    }
-    
-    .nav-list {
-        list-style: none;
-        &-section-break {
-            margin-top: 25px;
+        top: 25px;
+        left: 30px;
+        z-index: 2000;
+        text-align: center;
+        @include respond(tab-port) {
+            background-color: #333333;
+            top: 19px;
+            left: 20px;
+            width: 30px;
+            height: 23px;
+        }
+        @include respond(mobile) {
+            background-color: transparent;
+            top: 10px;
+            left: 10px;
         }
     }
-    
-    .btn-nav {
+    &_background {
+        height: 15px; //need to change later
+        width: 15px; //need to change later
+        border-radius: 20%;
+        top: 30px;
+        left: 35px;
+        position: fixed;
+        background-color: black;
+        // z-index: 1000;
+        transition: transform 0.1s;
+        @include respond(tab-port) {
+            top: 25px;
+            left: 24px;
+        }
+        @include respond(mobile) {
+            top: 10px;
+            left: 10px;
+        }
+    }
+    &_nav {
+        // height: 100vh;
+        // width: 100%;
+        // position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+        display: none;
+    }
+    &_list {
+        list-style: none;
+        text-align: center;
+        position: absolute;
+        top: 12.92%;
+        left: 40.8%;
+        z-index: 1500;
+        @include respond(mobile) {
+            top: 172px;
+            left: 66px;
+        }
+    }
+    &_item {
+        margin-bottom: 4px;
+    }
+    &_link {
         &:link,
         &:visited {
             text-decoration: none;
-            text-transform: uppercase;
-            font-family: Roboto;
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 12px;
-            line-height: 14px;
-            // /* identical to box height */
-            color: #999999;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
             transition: all 0.2s;
+            @include respond(mobile) {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
         &:hover,
         &:active {
             color: #C8A985;
         }
     }
-    
-    .links {
-        position: absolute;
-        top: 76.4%; //688px;
-        left: 3.125%; //45px;
-        &-header {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 12px;
-            color: #000000;
-            &-item:not(:last-child) {
-                margin-bottom: 4px;
+    .item-section-divider {
+        margin: 24px;
+        @include respond(mobile) {
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+    }
+    &_checkbox:checked~&_background {
+        z-index: 1000;
+        transform: scale(160);
+    }
+    &_checkbox:checked~&_nav {
+        display: inherit;
+    }
+    &_checkbox:checked~&_button {
+        background-color: black;
+    }
+    &_icon {
+        // position: absolute;
+        margin-top: 16px;
+        margin-left: -8px;
+        &,
+        &::before,
+        &::after {
+            width: 23px;
+            height: 1px;
+            background-color: black;
+            display: inline-block;
+            @include respond(tab-port) {
+                background-color: white;
             }
         }
-        &-arrow {
-            margin-left: 9px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            transition: all .2s;
+        }
+        &::before {
+            top: 10px;
+            // transform-origin: right;
+        }
+        &::after {
+            top: 22px;
+            // display: none;
         }
     }
-    
-    .temp-gray {
-        color: #999999;
+    &_checkbox:checked+&_button &_icon {
+        background-color: transparent;
     }
-    
-    .newsletter-box {
+    &_checkbox:checked+&_button &_icon::before {
+        top: 15px;
+        transform: rotate(135deg);
+        background-color: #C8A985;
+    }
+    &_checkbox:checked+&_button &_icon::after {
+        top: 15px;
+        transform: rotate(-135deg);
+        background-color: #C8A985;
+    }
+    &-logo-box {
         position: absolute;
-        top: 85.33%; //768px;
-        left: 3.125%; //45px;
+        z-index: 1500;
+        top: 30px;
+        left: 64px;
+        @include respond(tab-port) {
+            top: 23px;
+            left: 53px;
+        }
+        @include respond(mobile) {
+            top: 14.8px;
+            left: 92px;
+        }
+    }
+    &-logo {
+        height: 20px;
+    }
+    //for header icons
+    &-user-icon {
+        position: absolute;
+        width: auto;
+        top: 30px;
+        left: calc(87.9% - 30px);
+        text-decoration: none;
+        z-index: 1500;
+        li {
+            display: inline-block;
+            height: 25px;
+        }
+        @include respond(mobile) {
+            top: 11.8px;
+            left: 290px;
+        }
+    }
+    &-icon-mobile-menu-search {
+        @include respond(mobile) {
+            display: inherit !important;
+        }
+    }
+    &-icon-mod {
+        height: 25px;
+        &-t1 {
+            margin-right: 10px;
+        }
+        @include respond(mobile) {
+            display: none;
+        }
+    }
+    &-icon-bag-text {
+        position: absolute;
+        top: 7px;
+        left: 98.8%;
+        font-family: "Open Sans", sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 10px;
-        line-height: 12px;
-        color: #000000;
+        line-height: 14px;
+        color: #C8A985;
+        @include respond(mobile) {
+            display: none;
+        }
     }
-    
-    .newsletter-input {
-        position: absolute;
-        top: 87.4%; //787px
-        left: 3.125%; //45px
+    &-newsletter {
+        color: white;
+        margin-top: 114px;
+        @include respond(mobile) {
+            margin-top: 36px;
+        }
+        &-2 {
+            margin-top: 2px;
+            color: white;
+        }
+    }
+    &-newsletter-box {
+        color: white;
+        margin-top: 50px;
+        @include respond(mobile) {
+            margin-top: 17px;
+            margin-bottom: 19px;
+        }
         input[type=email] {
-            margin-top: 7px;
+            position: absolute;
+            top: 89%;
+            left: 0%;
             width: 170px;
             height: 25px;
             border-radius: 0px;
+            background-color: black;
             border: 1px solid #CCCCCC;
         }
          ::placeholder {
@@ -575,17 +918,16 @@
             font-weight: 400;
             font-size: 11px;
             line-height: 15px;
-            color: #999999;
+            color: #CCCCCC;
         }
     }
-    
-    .newsletter-input-submission {
+    &-newsletter-input-submission {
         background-color: #CCCCCC;
         position: absolute;
         width: 23px;
         height: 25px;
-        top: 24%;
-        left: 86.5%;
+        top: 89%;
+        left: 84.5%;
         &-arrow {
             position: absolute;
             width: 12.04px;
@@ -594,314 +936,76 @@
             top: 8.5px;
         }
     }
-    
-    .social {
-        .social-icons-list {
+    &-logo-social {
+        display: inline-block;
+        // margin-top: 10px;
+    }
+    &-social-icons-img {
+        // margin-top: 70px;
+        height: 28px;
+        width: 28px;
+        display: inline-block;
+    }
+    .nav-logo-div {
+        @include respond(mobile) {
             position: absolute;
-            list-style: none;
-            top: 91.9%; //827px
-            left: 3.125%; //45px;
-            margin-top: 10px;
-            li {
-                display: inline-block;
-            }
-        }
-        .social-icons-img {
-            width: auto;
-            height: 28px;
+            top: 392px;
+            left: 23px;
         }
     }
-    
-    .footer-section {
-        position: relative;
+    .user-tool-box {
+        position: absolute;
+        height: 106px;
+        width: 320px;
+        left: 0px;
         display: none;
-        @include respond(tab-landscape) {
+        @include respond(mobile) {
             display: inherit;
+            top: -120px;
+            left: -66.5px;
         }
-        @include respond(tab-port) {
-            padding-top: 5px;
-        }
+    }
+}
+
+.regular-nav {
+    @include respond(mobile) {
+        height: 50px;
+        background-color: #333333;
+    }
+}
+
+.sticky {
+    @include respond(mobile) {
+        height: 50px;
+        background-color: white !important;
+    }
+}
+
+.js-logo-mobile {
+    .logo-tab-portrait {
         @include respond(mobile) {
             display: none;
         }
     }
-    
-    .divider {
-        border-top: 1px solid #C8A985;
-    }
-    
-    .footer-content {
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 14px;
-        margin-top: 5px;
-        color: #000000;
-        &-links {
-            left: 75%;
-            position: absolute;
-            text-align: right;
-            &-list {
-                list-style: none;
-                text-emphasis: none;
-                li {
-                    display: inline-block;
-                }
-                &-1 {
-                    padding-right: 10px;
-                }
-            }
-            @include respond(tab-port) {
-                left: 69%;
-            }
-        }
-    }
-    
-    .navigation {
-        display: none;
-        @include respond(tab-landscape) {
+    .logo {
+        @include respond(mobile) {
             display: inherit;
         }
-        //test-area
-        // &-logo-box {
-        //     position: absolute;
-        //     z-index: 1500;
-        // }
-        &_checkbox {
-            display: none;
-        }
-        &_button {
-            background-color: white;
-            // border-radius: 20%;
-            height: 33px;
-            width: 30px;
-            position: absolute;
-            top: 25px;
-            left: 30px;
-            z-index: 2000;
-            text-align: center;
-            @include respond(tab-port) {
-                background-color: #333333;
-                top: 19px;
-                left: 20px;
-                width: 30px;
-                height: 23px;
-            }
-            @include respond(mobile) {
-                top: 10px;
-                left: 10px;
-            }
-        }
-        &_background {
-            height: 15px; //need to change later
-            width: 15px; //need to change later
-            border-radius: 20%;
-            top: 30px;
-            left: 35px;
-            position: fixed;
-            background-color: black;
-            z-index: 1000;
-            transition: transform 0.1s;
-            @include respond(tab-port) {
-                top: 25px;
-                left: 24px;
-            }
-            @include respond(mobile) {
-                top: 10px;
-                left: 10px;
-            }
-        }
-        &_nav {
-            // height: 100vh;
-            // width: 100%;
-            // position: relative;
-            top: 0;
-            left: 0;
-            z-index: 1500;
-            display: none;
-        }
-        &_list {
-            list-style: none;
-            text-align: center;
-            position: absolute;
-            top: 12.92%;
-            left: 40.8%;
-            z-index: 1500;
-        }
-        &_item {
-            margin-bottom: 4px;
-        }
-        &_link {
-            &:link,
-            &:visited {
-                text-decoration: none;
-                font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 28px;
-                color: #FFFFFF;
-                transition: all 0.2s;
-            }
-            &:hover,
-            &:active {
-                color: #C8A985;
-            }
-        }
-        .item-section-divider {
-            margin: 24px;
-        }
-        &_checkbox:checked~&_background {
-            transform: scale(160);
-        }
-        &_checkbox:checked~&_nav {
-            display: inherit;
-        }
-        &_checkbox:checked~&_button {
-            background-color: black;
-        }
-        &_icon {
-            // position: absolute;
-            margin-top: 16px;
-            margin-left: -8px;
-            &,
-            &::before,
-            &::after {
-                width: 23px;
-                height: 1px;
-                background-color: black;
-                display: inline-block;
-                @include respond(tab-port) {
-                    background-color: white;
-                }
-            }
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0%;
-                transition: all .2s;
-            }
-            &::before {
-                top: 10px;
-                // transform-origin: right;
-            }
-            &::after {
-                top: 22px;
-                // display: none;
-            }
-        }
-        &_checkbox:checked+&_button &_icon {
-            background-color: transparent;
-        }
-        &_checkbox:checked+&_button &_icon::before {
-            top: 15px;
-            transform: rotate(135deg);
-            background-color: #C8A985;
-        }
-        &_checkbox:checked+&_button &_icon::after {
-            top: 15px;
-            transform: rotate(-135deg);
-            background-color: #C8A985;
-        }
-        &-logo-box {
-            position: absolute;
-            z-index: 1500;
-            top: 30px;
-            left: 64px;
-            @include respond(tab-port) {
-                top: 23px;
-                left: 53px;
-            }
-        }
-        &-logo {
-            height: 20px;
-        }
-        //for header icons
-        &-user-icon {
-            position: absolute;
-            width: auto;
-            top: 30px;
-            left: calc(87.9% - 30px);
-            text-decoration: none;
-            z-index: 1500;
-            li {
-                display: inline-block;
-                height: 25px;
-            }
-        }
-        &-icon-mod {
-            height: 25px;
-            &-t1 {
-                margin-right: 10px;
-            }
-        }
-        &-icon-bag-text {
-            position: absolute;
-            top: 7px;
-            left: 98.8%;
-            font-family: "Open Sans", sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 14px;
-            color: #C8A985;
-        }
-        &-newsletter {
-            color: white;
-            margin-top: 114px;
-            &-2 {
-                margin-top: 2px;
-                color: white;
-            }
-        }
-        &-newsletter-box {
-            color: white;
-            margin-top: 50px;
-            input[type=email] {
-                position: absolute;
-                top: 89%;
-                left: 0%;
-                width: 170px;
-                height: 25px;
-                border-radius: 0px;
-                background-color: black;
-                border: 1px solid #CCCCCC;
-            }
-             ::placeholder {
-                padding: 5px 131.5px 5px 9.5px;
-                font-family: 'Open Sans', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 11px;
-                line-height: 15px;
-                color: #CCCCCC;
-            }
-        }
-        &-newsletter-input-submission {
-            background-color: #CCCCCC;
-            position: absolute;
-            width: 23px;
-            height: 25px;
-            top: 89%;
-            left: 84.5%;
-            &-arrow {
-                position: absolute;
-                width: 12.04px;
-                height: 7.07px;
-                left: 5px;
-                top: 8.5px;
-            }
-        }
-        &-logo-social {
-            display: inline-block;
-            // margin-top: 10px;
-        }
-        &-social-icons-img {
-            // margin-top: 70px;
-            height: 28px;
-            width: 28px;
-            display: inline-block;
+    }
+}
+
+.js-nav-backgound {
+    .navigation_icon,
+    .navigation_icon::before,
+    .navigation_icon::after {
+        @include respond(mobile) {
+            background-color: #000000;
         }
     }
+}
+
+.js-user-text {
+    @include respond(mobile) {
+        color: black !important;
+    }
+}

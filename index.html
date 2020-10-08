@@ -25,7 +25,7 @@
             <div class="navigation-user-icon">
                 <ul class="navigation-user-icon-list">
                     <li>
-                        <a><img src="img/Icon search-menu.png" alt="user-icon-search" class="navigation-icon-mod navigation-icon-mod-t1"></a>
+                        <a><img src="img/Icon search-menu.png" alt="user-icon-search" class="navigation-icon-mod navigation-icon-mod-t1 navigation-icon-mobile-menu-search"></a>
                     </li>
                     <li>
                         <a><img src="img/Icon heart-menu.png" alt="user-icon-heart" class="navigation-icon-mod navigation-icon-mod-t1"></a>
@@ -37,6 +37,11 @@
                 </ul>
             </div>
             <ul class="navigation_list">
+                <li class="navigation_item item-section-divider">
+                    <a href="#" class="navigation_link">
+                        <img src="img/Mobile User tool.png" alt="menu-user-tool" class="user-tool-box">
+                    </a>
+                </li>
                 <li class="navigation_item item-section-divider">
                     <a href="#" class="navigation_link">HOME</a>
                 </li>
@@ -75,37 +80,41 @@
                         <img src="img/Icon arrows slim right-black.png" alt="submission-arrow" class="navigation-newsletter-input-submission-arrow">
                     </a>
                 </li>
-                <li class="navigation-logo-social"><img src="img/Icon facebook.png" alt="facebook-logo" class="navigation-social-icons-img"> </li>
-                <li class="navigation-logo-social"><img src="img/Icon twitter.png" alt="twitter-logo" class="navigation-social-icons-img"> </li>
-                <li class="navigation-logo-social"><img src="img/Icon google plus.png" alt="gplus-logo" class="navigation-social-icons-img"> </li>
-                <li class="navigation-logo-social"><img src="img/Icon tumblr.png" alt="tumblr-logo" class="navigation-social-icons-img"> </li>
+                <div class="nav-logo-div">
+                    <li class="navigation-logo-social"><img src="img/Icon facebook.png" alt="facebook-logo" class="navigation-social-icons-img"> </li>
+                    <li class="navigation-logo-social"><img src="img/Icon twitter.png" alt="twitter-logo" class="navigation-social-icons-img"> </li>
+                    <li class="navigation-logo-social"><img src="img/Icon google plus.png" alt="gplus-logo" class="navigation-social-icons-img"> </li>
+                    <li class="navigation-logo-social"><img src="img/Icon tumblr.png" alt="tumblr-logo" class="navigation-social-icons-img"> </li>
+                </div>
             </ul>
         </nav>
     </div>
 
-    <header>
-        <div class="logo-box">
-            <img src="img/Logo.png" alt="logo" class="logo">
-            <img src="img/Logo-white.png" alt="logo" class="logo-tab-portrait">
+    <header class="main-nav">
+        <nav class="regular-nav" id="dynamic">
+            <div class="logo-box">
+                <img src="img/Logo.png" alt="logo" class="logo">
+                <img src="img/Logo-white.png" alt="logo" class="logo-tab-portrait">
 
-        </div>
-        <div class="user-icon">
-            <ul class="user-icon-list">
-                <li>
-                    <a><img src="img/Icon search.png" alt="user-icon-search" class="icon-mod icon-mod-t1"></a>
-                    <a><img src="img/Icon search-white.png" alt="user-icon-search" class="icon-mod icon-mod-t1 icon-mod-tab-port icon-mod-mobile"></a>
-                </li>
-                <li>
-                    <a><img src="img/Icon heart.png" alt="user-icon-heart" class="icon-mod icon-mod-t1"></a>
-                    <a><img src="img/Icon heart-white.png" alt="user-icon-heart" class="icon-mod icon-mod-t1 icon-mod-tab-port"></a>
-                </li>
-                <li>
-                    <a><img src="img/Icon bag.png" alt="user-icon-bag" class="icon-mod"></a>
-                    <a><img src="img/Icon bag-white.png" alt="user-icon-bag" class="icon-mod icon-mod-tab-port"></a>
-                    <div class="icon-bag-text">(2)</div>
-                </li>
-            </ul>
-        </div>
+            </div>
+            <div class="user-icon">
+                <ul class="user-icon-list">
+                    <li>
+                        <a><img src="img/Icon search.png" alt="user-icon-search" class="icon-mod icon-mod-t1"></a>
+                        <a><img src="img/Icon search-white.png" alt="user-icon-search" class="icon-mod icon-mod-t1 icon-mod-tab-port icon-mod-mobile js-user-icon-1"></a>
+                    </li>
+                    <li>
+                        <a><img src="img/Icon heart.png" alt="user-icon-heart" class="icon-mod icon-mod-t1"></a>
+                        <a><img src="img/Icon heart-white.png" alt="user-icon-heart" class="icon-mod icon-mod-t1 icon-mod-tab-port js-user-icon-2"></a>
+                    </li>
+                    <li>
+                        <a><img src="img/Icon bag.png" alt="user-icon-bag" class="icon-mod"></a>
+                        <a><img src="img/Icon bag-white.png" alt="user-icon-bag" class="icon-mod icon-mod-tab-port js-user-icon-3"></a>
+                        <div class="icon-bag-text">(2)</div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="main-content">
@@ -126,7 +135,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-1-of-2-custom image-big">
+                <div class="col-1-of-2-custom image-big js--sticky">
                     <div class="text-box">
                         <div>GET INTO THE
                             <br>NEW SEASON’S MOOD</div>
@@ -273,7 +282,13 @@
                 </span>
             </footer>
         </section>
+
     </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
