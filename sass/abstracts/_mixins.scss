@@ -13,4 +13,14 @@
             @content
         }
     }
+    @if $breakpoint==tab-port {
+        @media (max-width: 768px) {
+            @content
+        }
+    }
+    @if $breakpoint==mobile {
+        @media (max-width: 768px) {
+            @content
+        }
+    }
 }

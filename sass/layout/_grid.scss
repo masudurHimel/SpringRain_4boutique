@@ -4,15 +4,27 @@
     padding: 0 0;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include respond(tab-port) {
+            margin-bottom: 0px;
+        }
     }
     [class^="col-"] {
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {
+                margin-right: 0px;
+            }
         }
     }
     @include clearfix;
     .col-1-of-1 {
+        width: 100%;
+        @include respond(tab-port) {
+            width: calc(100% + 30px);
+        }
+    }
+    .col-1-of-1-custom {
         width: 100%;
     }
     .col-1-of-2 {
@@ -20,6 +32,9 @@
     }
     .col-1-of-3 {
         width: calc((100% - 2 * #{$gutter-horizontal})/3);
+        @include respond(tab-port) {
+            width: calc((100% - 2 * #{$gutter-horizontal})/3 + 20px);
+        }
     }
     .col-2-of-3 {
         width: calc(2*((100% - 2 * #{$gutter-horizontal})/3) + #{$gutter-horizontal});
