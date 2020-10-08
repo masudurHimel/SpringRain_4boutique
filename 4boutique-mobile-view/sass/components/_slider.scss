@@ -1,0 +1,79 @@
+.slider {
+    height: 64rem;
+    width: 36rem;
+    background-color: $color-primary;
+    position: relative;
+
+    &-text-area {
+        position: absolute;
+        margin-top: 70%;
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: center;
+
+        &-text {
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 43px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-btn {
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 4px 12px;
+    }
+
+    &-indicators {
+
+        position: absolute;
+        margin-top: 50rem;
+        margin-left: 14rem;
+        margin-right: 30%;
+
+        &-list {
+            &-all {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    margin-bottom: 6px;    
+                }
+
+            }
+
+        }
+
+    }
+    &-icon-arrow-down{
+        position: absolute;
+        top: 58rem;
+        margin-left: 17rem;
+    }
+
+
+}
+
+.indicator {
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+
+    &:not(:first-child){
+        margin-bottom: 10px;
+        background-color: $color-white;
+    }
+    margin-right: 6px;
+    &-active {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 10px;
+
+    }
+}
