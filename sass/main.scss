@@ -52,6 +52,10 @@
             top: 23px;
             left: 54px;
         }
+        @include respond(mobile) {
+            top: 15px;
+            left: 92px;
+        }
     }
     
     .logo {
@@ -80,6 +84,10 @@
             top: 20px;
             left: 83%;
         }
+        @include respond(mobile) {
+            top: 13px;
+            left: 77.4%;
+        }
         text-decoration: none;
         li {
             display: inline-block;
@@ -95,11 +103,20 @@
                 }
                 &-t1 {
                     margin-right: 10px;
+                    @include respond(mobile) {
+                        margin-right: 0px;
+                    }
                 }
                 &-tab-port {
                     display: none;
                     @include respond(tab-port) {
                         display: inherit;
+                    }
+                }
+                &-mobile {
+                    @include respond(mobile) {
+                        position: absolute;
+                        right: 245px;
                     }
                 }
             }
@@ -155,6 +172,9 @@
     .image-slider {
         background-color: #333333;
         height: calc(#{$content-height} * 0.46);
+        @include respond(mobile) {
+            height: 640px;
+        }
         .slider-text-box {
             position: absolute;
             font-family: Roboto;
@@ -166,21 +186,34 @@
             top: 17.08%;
             color: #FFFFFF;
             text-align: center;
+            @include respond(mobile) {
+                left: 51.5px;
+                top: 244px;
+            }
             &-header {
                 font-size: 32px;
                 line-height: 37px;
             }
-            &-details {
+            &-detail {
                 font-size: 16px;
                 line-height: 20px;
+                @include respond(mobile) {
+                    display: none;
+                }
             }
             .slide-indicator {
                 height: 12px;
                 margin-top: 6.05%;
+                @include respond(mobile) {
+                    margin-top: 108px;
+                }
             }
             .slide-arrow {
                 height: 20px;
                 margin-top: 20%;
+                @include respond(mobile) {
+                    margin-top: 65px;
+                }
             }
             .btn-content-sliding {
                 display: inline-block;
@@ -199,6 +232,16 @@
                 line-height: 14px;
                 color: #FFFFFF;
             }
+            @include respond(mobile) {
+                width: 217px;
+                height: 76px;
+                // left: 51.5px;
+                // top: 277px;
+                font-size: 32px;
+                line-height: 37px;
+                text-align: center;
+                color: #FFFFFF;
+            }
         }
     }
     
@@ -207,6 +250,9 @@
         height: calc(#{$content-height} * 0.56);
         @include respond(tab-port) {
             height: 320px;
+        }
+        @include respond(mobile) {
+            height: 229px;
         }
         .text-box {
             position: absolute;
@@ -227,6 +273,11 @@
             @include respond(tab-port) {
                 top: 57.5%;
                 left: 9.7%;
+            }
+            @include respond(mobile) {
+                top: 717px;
+                left: 19.5px;
+                line-height: 28px;
             }
         }
         .btn-content-large {
@@ -251,6 +302,9 @@
         @include respond(tab-port) {
             height: 160px;
         }
+        @include respond(mobile) {
+            height: 152px;
+        }
         .text-box {
             position: absolute;
             width: 168px;
@@ -270,6 +324,12 @@
             @include respond(tab-port) {
                 top: 49%;
                 left: 61.2%;
+            }
+            @include respond(mobile) {
+                font-size: 20px;
+                line-height: 23px;
+                top: 908px;
+                left: 14px;
             }
         }
         .btn-content-aside-1 {
@@ -297,6 +357,9 @@
         @include respond(tab-port) {
             height: 160px;
         }
+        @include respond(mobile) {
+            height: 151px;
+        }
         .text-box {
             position: absolute;
             width: 164px;
@@ -316,6 +379,12 @@
             @include respond(tab-port) {
                 top: 66.3%;
                 left: 75.8%;
+            }
+            @include respond(mobile) {
+                font-size: 20px;
+                line-height: 23px;
+                top: 1058px;
+                left: 143px;
             }
         }
         .btn-content-aside-2 {
@@ -351,11 +420,11 @@
         @include respond(tab-port) {
             height: 240px;
         }
+        @include respond(mobile) {
+            height: 297px;
+        }
         &-1 {
             background-color: #CCCCCC;
-            // position: absolute;
-            // top: 756px;
-            // color: #FFFFFF;
         }
         &-2 {
             background-color: #F2F2F2;
@@ -381,6 +450,10 @@
                 @include respond(tab-port) {
                     left: 6.9%;
                 }
+                @include respond(mobile) {
+                    top: 1365px;
+                    left: 71px;
+                }
             }
             &-2 {
                 left: 43.7%; //504px;
@@ -390,6 +463,10 @@
                 @include respond(tab-port) {
                     left: 42.4%;
                 }
+                @include respond(mobile) {
+                    top: 1660px;
+                    left: 90px;
+                }
             }
             &-3 {
                 left: 75.65%; //870px;
@@ -398,6 +475,10 @@
                 }
                 @include respond(tab-port) {
                     left: 72.5%;
+                }
+                @include respond(mobile) {
+                    top: 1965px;
+                    left: 63px;
                 }
             }
         }
@@ -540,6 +621,9 @@
         @include respond(tab-port) {
             padding-top: 5px;
         }
+        @include respond(mobile) {
+            display: none;
+        }
     }
     
     .divider {
@@ -604,6 +688,10 @@
                 width: 30px;
                 height: 23px;
             }
+            @include respond(mobile) {
+                top: 10px;
+                left: 10px;
+            }
         }
         &_background {
             height: 15px; //need to change later
@@ -618,6 +706,10 @@
             @include respond(tab-port) {
                 top: 25px;
                 left: 24px;
+            }
+            @include respond(mobile) {
+                top: 10px;
+                left: 10px;
             }
         }
         &_nav {
