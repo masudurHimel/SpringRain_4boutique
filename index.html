@@ -11,49 +11,47 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <script>
-      $(document).ready(function() {
-          $("#wrapper").click(function() {
-              $(".menu").toggleClass("close");
-              $(".main").toggleClass("close1");
-              $(".sidebar").toggleClass("close2");
-              $(".footer-menu").toggleClass("close3");
-              $(".container-menu").toggleClass("close2");
-              $(".tablet-landscape-menu").toggleClass("close2");
-              $(".table-landscape-header").toggleClass("close2");
-
-
-          });
+      $(document).ready(function () {
+        $("#wrapper").click(function () {
+          $(".menu").toggleClass("close");
+          $(".main").toggleClass("close1");
+          $(".sidebar").toggleClass("close2");
+          $(".footer-menu").toggleClass("close3");
+          $(".container-menu").toggleClass("close2");
+          $(".tablet-landscape-menu").toggleClass("close2");
+          $(".table-landscape-header").toggleClass("close2");
+          $(".tablet-protrait-slider").toggleClass("close2");
+        });
       });
-
-  </script>
+    </script>
 
     <div>
       <div class="table-landscape-header">
         <header>
           <div id="wrapper">
             <div class="main-item menu">
-                <span class="line line01"></span>
-                <span class="line line02"></span>
-                <span class="line line03"></span>
+              <span class="line line01"></span>
+              <span class="line line02"></span>
+              <span class="line line03"></span>
             </div>
-        </div>
-        
+          </div>
+
           <div class="header-logo"><img src="img/Logo.png" /></div>
           <div class="user-tool">
             <ul>
               <li>
-                <a href="#"><img src="img/Icon search.png" /></a>
+                <a href="#"><img src="img/Icon search.png" class="user-tool-img"/></a>
               </li>
               <li>
-                <a href="#"><img src="img/Icon heart.png" /></a>
+                <a href="#"><img src="img/Icon heart.png" class="user-tool-img"/></a>
               </li>
               <li>
-                <a href="#"><img src="img/Icon bag.png" /></a>
+                <a href="#"><img src="img/Icon bag.png" class="user-tool-img"/></a>
               </li>
             </ul>
           </div>
@@ -62,7 +60,6 @@
     </div>
     <div class="tablet-landscape-menu">
       <header>
-
         <div class="header-logo"><img src="img/Logo-menu.png" /></div>
         <div class="user-tool">
           <ul>
@@ -79,6 +76,15 @@
         </div>
       </header>
     </div>
+
+    <section class="tablet-protrait-slider">
+      <p class="discription">new f/w 2015 collection</p>
+      <p class="sub-discription">
+        some random text here random text some random text here
+      </p>
+      <button class="btn-discription">button</button>
+      <i><a><img src="img/Shape arrow.png" alt="" class="shape-arrow"></a></i>
+    </section>
 
     <section class="container container-menu">
       <div class="sidebar">
