@@ -1,0 +1,76 @@
+.header {
+    height: 6rem;
+    width: 36rem;
+   // margin-left: 9px;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    top: -25px;
+    background: $color-primary;
+    position: fixed;
+    z-index: 100;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+    .logo{
+        img{
+        margin-bottom: 5px !important;
+
+//            margin-bottom: 20px !;
+        }
+    }
+    &-search{
+        margin-left: 5.4rem;
+        img{
+             width: 30px;
+             height: 30px;
+        }
+        
+    }
+
+    &-user-tool {
+        margin-right: 0 !important;
+        
+        &-heart{
+            margin-left: 20px !important;
+        
+            img{
+                margin-bottom: 3px;
+            }
+        }
+        &-notification{
+            position: absolute;
+            margin-top: 8px;
+            margin-left: -5px;
+        
+            &-text{
+                font-size: 10px;
+                font-weight: 300;
+                color: $color-white;
+            }
+        }
+        &-bag{
+            img{
+                margin-bottom: 3px;
+
+            }
+        }
+
+    }
+
+}
+
+.sticky .header{
+    background-color: white;
+    .header-user-tool-notification-text{
+        color: black;
+    }
+}
