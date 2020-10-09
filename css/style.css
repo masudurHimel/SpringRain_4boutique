@@ -610,4 +610,37 @@ header {
     cursor: pointer;
   }
 
+  .footer-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  .container{
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  .row1 {
+    flex-wrap: wrap;
+    font-size: 5px;
+    width: 100%;
+  }
+  .footer-menu {
+    display: block;
+  }
+  .row2{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .row1-content, .sub-row{
+    width: 100%;
+  }
+  .row2 div{
+    width: 100%;
+  }
+  .sub-discription{
+    display: none;
+  }
+  
 }
