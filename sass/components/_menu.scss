@@ -179,8 +179,8 @@
         padding: 6px;
         color: white;
         @include respond(desktop) {
-            border: 1px solid gray;
-            color: black;
+            border: 1px solid #CCCCCC;
+            color: #CCCCCC;
         }
     }
     .arrow {
@@ -196,9 +196,12 @@
         }
         @include respond(desktop) {
             top: 22px;
-            background-color: gray;
-            border: 1px solid gray;
+            left: 154px;
+            background-color: #CCCCCC;
+            border: 1px solid #CCCCCC;
             color: white;
+            height: 29px;
+            width: 29px;
         }
         position: absolute;
         background-color: $color-white;

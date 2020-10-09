@@ -1,31 +1,38 @@
-.btn{
+.btn:link,
+.btn:visited {
     text-decoration: none;
     border: 1px solid $color-white;
 }
 
-.grid-image-btn{
-    text-transform: uppercase;
-    color: $color-white;
-    font-size: 10px;
-    font-weight: 400;
-    padding: 2px 10px;
+.btn:hover,
+.btn:active {
+    border: 1px solid black;
+    color: black;
 }
 
-.big-image-btn{
+.grid-image-btn {
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+.big-image-btn {
     position: absolute;
-    top: 65%;
-    left: 50%;
+    top: 60%;
+    left: 44%;
     transform: translateX(-50%);
 }
 
-.aside-1-btn{
-    margin-left: 18%;
+.aside-1-btn {
     position: absolute;
     top: 65%;
-    margin-top: 5px;
+    left: 25%;
 }
 
-.aside-2-btn{
+.aside-2-btn {
     float: right;
-    margin-right: 20%;
+    margin-right: 18%;
 }
