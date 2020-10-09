@@ -329,14 +329,23 @@ body {
     top: 9.5px;
     display: inline-block;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #CCCCCC;
     color: black; }
     @media (min-width: 600px) and (max-width: 768px) {
       .newsletter .arrow {
-        top: 16px; } }
+        border: 0px solid #CCCCCC;
+        top: 16.5px;
+        height: 29px; } }
     @media (min-width: 769px) and (max-width: 1120px) {
       .newsletter .arrow {
-        top: 16px; } }
+        border: 0px solid #CCCCCC;
+        top: 16.5px;
+        height: 29px; } }
+    @media (max-width: 599px) {
+      .newsletter .arrow {
+        border: 0px solid #CCCCCC;
+        top: 10px;
+        height: 29px; } }
     @media (min-width: 1121px) {
       .newsletter .arrow {
         top: 22px;
@@ -346,6 +355,11 @@ body {
         color: white;
         height: 29px;
         width: 29px; } }
+  @media (min-width: 1121px) {
+    .newsletter .trial {
+      position: absolute;
+      left: -1px;
+      top: -1px; } }
 
 .social {
   position: absolute;

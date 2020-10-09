@@ -190,10 +190,19 @@
         top: 9.5px;
         display: inline-block;
         @include respond(tab-port) {
-            top: 16px;
+            border: 0px solid #CCCCCC;
+            top: 16.5px;
+            height: 29px;
         }
         @include respond(tab-land) {
-            top: 16px;
+            border: 0px solid #CCCCCC;
+            top: 16.5px;
+            height: 29px;
+        }
+        @include respond(mobile) {
+            border: 0px solid #CCCCCC;
+            top: 10px;
+            height: 29px;
         }
         @include respond(desktop) {
             top: 22px;
@@ -205,8 +214,15 @@
             width: 29px;
         }
         position: absolute;
-        background-color: $color-white;
+        background-color:#CCCCCC;
         color: black;
+    }
+    .trial {
+        @include respond(desktop) {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+        }
     }
 }
 
