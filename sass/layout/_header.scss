@@ -42,23 +42,31 @@
     }
 
     .logo {
-        
+        position: fixed !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        top: 25px !important;
+
         @include respond(tab-port) {
             position: fixed !important;
             left: 60px !important;
             top: 25px !important;
+            transform: translateX(0);
+
         }
 
         @include respond(tab-land) {
             position: fixed !important;
             left: 75px !important;
             top: 25px !important;
+            transform: translateX(0);
         }
 
         @include respond(desktop) {
             position: fixed !important;
             left: 40px !important;
             top: 22px !important;
+            transform: translateX(0);
         }
 
         img {
@@ -67,13 +75,22 @@
     }
 
     &-search {
-        margin-left: 5.4rem;
+        margin-left: 4.4rem;
+
+        @include respond(tab-port) {
+            margin-left: 0;
+            margin-right: 5px !important;
+            position: fixed;
+            right: 10%;
+            top: 22px;
+        }
 
         @include respond(tab-land) {
             margin-left: 0;
+            margin-right: 5px !important;
             position: fixed;
-            right: 15%;
-            top: 1.7%;
+            right: 10.5%;
+            top: 14px;
         }
 
         @include respond(desktop) {
@@ -91,17 +108,24 @@
         margin-right: 0 !important;
 
         &-heart {
-            margin-left: 20px !important;
+            position: fixed;
+            right: 10%;
+            top: 22px;
+            margin-right: 5px !important;
 
             @include respond(tab-port) {
-                margin-left: -15% !important;
+                right: 6%;
+                top: 24px;
+
+                // margin-left: -15% !important;
             }
 
             @include respond(tab-land) {
                 position: fixed;
-                right: 12%;
-                top: 2%;
-                margin-left: 0 !important;
+                right: 8%;
+                top: 16px;
+                margin-right: 5px !important;
+
             }
 
             @include respond(desktop) {
@@ -123,34 +147,45 @@
             }
 
             &-text {
+                position: fixed;
+                right: 2%;
+                top: 25px;
                 font-size: 10px;
-
                 font-weight: 300;
                 color: $color-white;
 
                 @include respond(tab-port) {
                     font-size: 12px;
+                    right: 1%;
+                    top: 26px;
                 }
 
                 @include respond(tab-land) {
                     font-size: 12px;
+                    margin: 0;
                     position: fixed;
-                    right: 7%;
+                    right: 4.5%;
                     top: 2.5%;
                 }
             }
         }
 
         &-bag {
+            position: fixed;
+            right: 5%;
 
             @include respond(desktop) {
                 display: none !important;
             }
 
             @include respond(tab-land) {
-                position: fixed;
-                right: 9%;
+                right: 6%;
                 top: 2%;
+            }
+
+            @include respond(tab-port) {
+                right: 3%;
+                top: 22px;
             }
 
             img {
