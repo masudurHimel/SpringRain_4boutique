@@ -33,11 +33,12 @@
             }
         }
         &-text {
-            font-size: 26px;
-            font-weight: 400;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: normal;
             text-transform: uppercase;
             color: $color-white;
-            line-height: 43px;
+            line-height: 37px;
             margin-bottom: 30px;
             @include respond(tab-port) {
                 font-size: 32px;
@@ -55,7 +56,9 @@
         font-size: 12px;
         font-weight: 400;
         padding: 4px 12px;
-        margin-left: 10%;
+        @include respond(tab-port) {
+            margin-left: 10%;
+        }
     }
     &-indicators {
         position: absolute;

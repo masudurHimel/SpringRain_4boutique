@@ -87,11 +87,12 @@ body {
           margin-bottom: 20px;
           margin-left: 10%; } }
     .slider-text-area-text {
-      font-size: 26px;
-      font-weight: 400;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: normal;
       text-transform: uppercase;
       color: #ffffff;
-      line-height: 43px;
+      line-height: 37px;
       margin-bottom: 30px; }
       @media (min-width: 600px) and (max-width: 768px) {
         .slider-text-area-text {
@@ -106,8 +107,10 @@ body {
     color: #ffffff;
     font-size: 12px;
     font-weight: 400;
-    padding: 4px 12px;
-    margin-left: 10%; }
+    padding: 4px 12px; }
+    @media (min-width: 600px) and (max-width: 768px) {
+      .slider-btn {
+        margin-left: 10%; } }
   .slider-indicators {
     position: absolute;
     top: 75%;
