@@ -625,7 +625,7 @@ header {
         padding-top: 5px;
     }
     @include respond(mobile) {
-        display: inherit;
+        display: none;
     }
 }
 
@@ -1007,5 +1007,42 @@ header {
 .js-user-text {
     @include respond(mobile) {
         color: black !important;
+    }
+}
+
+.only-mobile-footer {
+    display: none;
+    @include respond(mobile) {
+        display: inherit;
+    }
+}
+
+.back-on-top {
+    position: relative;
+    margin-left: 111px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &-img {
+        height: 25px;
+    }
+}
+
+.footer-content-links-list-mobile {
+    li {
+        display: inline-block;
+        font-size: 10px;
+        //font
+        // position: absolute;
+        // width: 28px;
+        // height: 15px;
+        // left: 31px;
+        // top: 1571px;
+        font-family: "Open Sans", ;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 15px;
+        text-align: center;
+        color: #C8A985;
     }
 }

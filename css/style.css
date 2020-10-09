@@ -601,7 +601,7 @@ header {
       padding-top: 5px; } }
   @media (max-width: 320px) {
     .footer-section {
-      display: inherit; } }
+      display: none; } }
 
 .divider {
   border-top: 1px solid #C8A985; }
@@ -903,3 +903,28 @@ header {
 @media (max-width: 320px) {
   .js-user-text {
     color: black !important; } }
+
+.only-mobile-footer {
+  display: none; }
+  @media (max-width: 320px) {
+    .only-mobile-footer {
+      display: inherit; } }
+
+.back-on-top {
+  position: relative;
+  margin-left: 111px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .back-on-top-img {
+    height: 25px; }
+
+.footer-content-links-list-mobile li {
+  display: inline-block;
+  font-size: 10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #C8A985; }

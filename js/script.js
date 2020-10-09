@@ -4,7 +4,7 @@ $(window).ready(function() {
         if (direction == 'down') {
             $('.regular-nav').addClass('sticky');
             $('.logo-box').addClass('js-logo-mobile');
-            $('.navigation_button').addClass('js-nav-backgound'); //icon-mod-mobile tt
+            $('.navigation_button').addClass('js-nav-backgound');
             $('.js-user-icon-1').attr('src', 'img/Icon search.png');
             $('.js-user-icon-2').attr('src', 'img/Icon heart.png');
             $('.js-user-icon-3').attr('src', 'img/Icon bag.png');
