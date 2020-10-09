@@ -1,34 +1,28 @@
 .navigation {
     &-active {
         color: $color-secondary !important;
-        margin-top: 18px;
+        // margin-top: 18px;
+        margin-top: 70%;
     }
-
     &_background {
         @include respond(desktop) {
             display: none !important;
         }
-
         height: 2rem;
         width: 2rem;
         position: fixed;
         top: 1.5rem;
         left: 1.5rem;
         background-color: black;
-
         z-index: 1000;
-
     }
-
     &-button {
         @include respond(desktop) {
             display: none !important;
         }
-
         background-color: $color-primary;
         height: 5rem;
         width: 5rem;
-
         position: fixed;
         top: -1px;
         left: -1px;
@@ -36,7 +30,6 @@
         text-align: center;
         cursor: pointer;
     }
-
     &_nav {
         height: 100vh;
         position: fixed;
@@ -44,22 +37,17 @@
         left: 0;
         z-index: 1500;
         overflow: hidden;
-
         opacity: 0;
         width: 0;
-
         @include respond(desktop) {
             opacity: 1;
             width: 270px;
         }
-
         transition: all .8s;
-
         @include respond(desktop) {
             transition: none !important;
         }
     }
-
     &_list {
         position: absolute;
         top: 50%;
@@ -67,15 +55,12 @@
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
-
         @include respond(tab-port) {
             top: 35%;
         }
-
         @include respond(tab-land) {
             top: 35%;
         }
-
         @include respond(desktop) {
             position: fixed;
             top: 20%;
@@ -84,84 +69,67 @@
             transform: none !important;
         }
     }
-
     &_item {
         margin: 0;
     }
-
     &_link {
-
         &:link,
         &:visited {
             display: inline-block;
             font-size: 14px;
             font-weight: 400;
+            font-style: normal;
             color: $color-white;
-
-            @include respond(desktop) {
-                color: $gray-color;
-                line-height: 14px;
-                letter-spacing: 1px;
-                font-size: 12px;
-            }
-
             text-decoration: none;
             text-transform: uppercase;
             line-height: 21px;
-            font-family: "Segoe UI";
-
+            font-family: "Roboto", sans-serif;
+            @include respond(desktop) {
+                color: $gray-color;
+                line-height: 14px;
+                // letter-spacing: 1px;
+                font-size: 12px;
+            }
             @include respond(tab-port) {
                 line-height: 30px;
                 font-size: 14px;
             }
-
             @include respond(tab-land) {
                 line-height: 30px;
                 font-size: 14px;
             }
-
             //         transition: all .4s;
         }
-
-
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary;
+            color: $color-secondary;
+            // color: $color-primary;
             //            transform: translateX(1rem);
         }
     }
-
-
     &_checkbox {
         display: none;
     }
-
     &_checkbox:checked~&-button {
         background-color: black;
     }
-
     &_checkbox:checked~&_background {
         transform: scale(140);
     }
-
     &_checkbox:checked~&_nav {
         width: 100%;
         opacity: 1;
     }
-
     &-icon {
         position: relative;
         margin-top: 3.5rem;
-
         @include respond(tab-land) {
             margin-left: 3.5rem;
         }
-
         @include respond(desktop) {
             display: none !important;
         }
-
         &,
         &::before,
         &::after {
@@ -170,7 +138,6 @@
             background-color: grey;
             display: inline-block;
         }
-
         &::before,
         &::after {
             content: "";
@@ -178,39 +145,30 @@
             left: 0;
             transition: all .2s;
         }
-
         &::before {
             top: -.8rem;
         }
-
         &::after {
             top: .8rem;
         }
     }
-
     &-button:hover &-icon::before {
         top: -1rem;
-
     }
-
     &-button:hover &-icon::after {
         top: 1rem;
     }
-
     &_checkbox:checked+&-button &-icon {
         background-color: transparent;
     }
-
     &_checkbox:checked+&-button &-icon::before {
         top: 0;
         background-color: $color-secondary;
         transform: rotate(135deg);
     }
-
     &_checkbox:checked+&-button &-icon::after {
         top: 0;
         background-color: $color-secondary;
-
         transform: rotate(-135deg);
     }
 }
@@ -219,19 +177,16 @@
     position: absolute;
     margin-left: 34%;
     margin-top: 2.3rem;
-
     @include respond(tab-port) {
         position: fixed;
         margin-left: 65px;
         margin-top: 25px;
     }
-
     @include respond(tab-land) {
         position: fixed;
         margin-left: 75px;
         margin-top: 25px;
     }
-
     @include respond(desktop) {
         display: none;
     }
@@ -241,15 +196,12 @@
     position: fixed;
     right: 10px;
     top: 20px;
-
     @include respond(desktop) {
         display: none;
     }
-
     @include respond(tab-port) {
         right: 115px;
     }
-
     @include respond(tab-land) {
         right: 115px;
     }
@@ -260,11 +212,9 @@
     position: fixed;
     top: 20px;
     right: 65px;
-
     @include respond(tab-port) {
         display: block;
     }
-
     @include respond(tab-land) {
         display: block;
     }
@@ -275,15 +225,12 @@
     position: fixed;
     top: 20px;
     right: 20px;
-
     @include respond(tab-port) {
         display: block;
     }
-
     @include respond(tab-land) {
         display: block;
     }
-
     &-text {
         display: none;
         position: fixed;
@@ -291,21 +238,17 @@
         top: 25px;
         color: $color-secondary;
         font-size: 12px;
-
         @include respond(tab-port) {
             display: block;
         }
-
         @include respond(tab-land) {
             display: block;
         }
-
     }
-
 }
 
 .navigation_item-bottom {
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 
 .sticky {

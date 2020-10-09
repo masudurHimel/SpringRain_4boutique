@@ -1,91 +1,71 @@
 .grid-image-row {
-
     [class^="col-"] {
         &:not(:last-child) {
             float: left;
         }
-
         &:last-child {
             float: right;
         }
     }
-
     @include clearfix;
-
     [class^="col-"] {
         width: 100%;
     }
-
     @include respond(tab-port) {
         .col-1-of-2-big-image {
             width: 60%;
         }
-
         .col-1-of-2-big-image-aside {
             width: 40%;
         }
-
         .col-1-of-3-square-image {
             width: calc((100%)/ 3);
         }
     }
-
     @include respond(tab-land) {
         max-width: 100%;
-
         .col-1-of-2-big-image {
             width: 60%;
             padding: 10px;
         }
-
         .col-1-of-2-big-image-aside {
             width: 40%;
             padding: 10px;
         }
-
         .col-1-of-3-square-image {
             width: calc((100%)/ 3);
             padding: 10px;
         }
-
     }
-
     @include respond(desktop) {
         max-width: 100%;
-
         .col-1-of-2-big-image {
             width: 60%;
             padding: 10px;
         }
-
         .col-1-of-2-big-image-aside {
             width: 40%;
         }
-
         .col-1-of-3-square-image {
             width: calc((100%)/ 3);
             padding: 10px;
         }
-
     }
 }
 
 .big-image {
-
     background-color: $gray-color;
     width: 100%;
     height: 300px;
     position: relative;
     border: 1px solid $color-white;
-
     @include respond(tab-land) {
         height: 388px;
     }
-
     @include respond(desktop) {
-        height: 360px;
+        // height: 360px;
+        height: calc(calc(100vh - 60px) * 0.56);
     }
-
     &-text {
         color: $color-white;
         top: 50%;
@@ -98,33 +78,27 @@
         line-height: 24px;
         text-transform: uppercase;
     }
-
     &-aside-1 {
         @include respond(tab-land) {
             padding: 10px;
         }
-
         @include respond(desktop) {
             padding: 10px;
         }
-
         &-image {
             background-color: $color-secondary;
             width: 100%;
             height: 180px;
             position: relative;
             border: 1px solid $color-white;
-
             @include respond(tab-port) {
                 height: 150px;
             }
-
             @include respond(desktop) {
-                height: 170px;
+                // height: 170px;
+                height: calc(((calc(100vh - 60px) * 0.56)/2) - 9.5px);
             }
-
         }
-
         &-text {
             color: $color-white;
             position: absolute;
@@ -136,43 +110,34 @@
             font-weight: 600;
             line-height: 24px;
             text-transform: uppercase;
-
             @include respond(tab-port) {
                 margin-bottom: 10px;
                 font-size: 20px;
                 line-height: 20px;
             }
-
         }
-
     }
-
     &-aside-2 {
-
         @include respond(tab-land) {
             padding: 10px;
         }
-
         @include respond(desktop) {
             padding: 10px;
         }
-
         &-image {
             background-color: #f0e3cc;
             width: 100%;
             height: 180px;
             position: relative;
             border: 1px solid $color-white;
-
             @include respond(tab-port) {
                 height: 150px;
             }
-
             @include respond(desktop) {
-                height: 170px;
+                // height: 170px;
+                height: calc(((calc(100vh - 60px) * 0.56)/2) - 9.5px);
             }
         }
-
         &-text {
             color: $color-white;
             margin-top: 15%;
@@ -184,21 +149,17 @@
             font-weight: 600;
             line-height: 32px;
             text-transform: uppercase;
-
             @include respond(tab-port) {
                 margin-bottom: 10px;
                 font-size: 20px;
                 line-height: 20px;
             }
-
             @include respond(desktop) {
                 margin-left: 43%;
                 margin-right: 8px;
                 margin-top: 10%;
             }
-
         }
-
     }
 }
 
@@ -210,17 +171,14 @@
             height: 300px;
             position: relative;
             border: 1px solid $color-white;
-
             @include respond(tab-port) {
                 height: 280px;
             }
-
             @include respond(desktop) {
-                height: 280px;
+                // height: 280px;
+                height: calc(calc(100vh - 60px) * 0.44);
             }
-
         }
-
         &-text {
             position: relative;
             color: $color-white;
@@ -232,23 +190,18 @@
             font-weight: 600;
             line-height: 32px;
             text-transform: uppercase;
-
             @include respond(tab-land) {
                 margin-top: 0;
                 top: 70%;
                 margin-left: 15%;
                 margin-right: 15%;
             }
-
             @include respond(desktop) {
                 margin-left: 15%;
                 margin-right: 15%;
             }
-
         }
-
     }
-
     .image-square-2 {
         &-image {
             background-color: #f2f2f2;
@@ -256,17 +209,14 @@
             height: 300px;
             position: relative;
             border: 1px solid $color-white;
-
             @include respond(tab-port) {
                 height: 280px;
             }
-
             @include respond(desktop) {
-                height: 280px;
+                // height: 280px;
+                height: calc(calc(100vh - 60px) * 0.44);
             }
-
         }
-
         &-text {
             position: relative;
             color: $color-white;
@@ -278,24 +228,18 @@
             font-weight: 600;
             line-height: 32px;
             text-transform: uppercase;
-
             @include respond(tab-land) {
                 margin-top: 0;
                 top: 70%;
                 margin-left: 15%;
                 margin-right: 15%;
-
             }
-
             @include respond(desktop) {
                 margin-left: 15%;
                 margin-right: 15%;
             }
-
         }
-
     }
-
     .image-square-3 {
         &-image {
             background-color: #cccccc;
@@ -303,17 +247,14 @@
             height: 300px;
             position: relative;
             border: 1px solid $color-white;
-
             @include respond(tab-port) {
                 height: 280px;
             }
-
             @include respond(desktop) {
-                height: 280px;
+                // height: 280px;
+                height: calc(calc(100vh - 60px) * 0.44);
             }
-
         }
-
         &-text {
             position: relative;
             color: $color-white;
@@ -325,20 +266,16 @@
             font-weight: 600;
             line-height: 32px;
             text-transform: uppercase;
-
             @include respond(tab-land) {
                 margin-left: 15%;
                 margin-right: 15%;
                 margin-top: 0;
                 top: 70%;
             }
-
             @include respond(desktop) {
                 margin-left: 15%;
                 margin-right: 15%;
             }
-
         }
-
     }
 }
