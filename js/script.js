@@ -1,26 +1,31 @@
-$(window).ready(function() {
+$(window).load(function() {
+    
+    $('header').removeClass('sticky');
+    
+    // $('.scroll-logo-image').removeClass('scroll-logo-image');
+    // $('.header-search-icon').removeClass('scroll-search-icon');
+    // $('.header-user-tool-heart-icon').removeClass('scroll-heart-icon');
+    // $('.header-user-tool-bag-icon').addClass('scroll-bag-icon').attr('src','img/Icon bag11.png');
 
-    $('.js--sticky').waypoint(function(direction) {
-        if (direction == 'down') {
-            $('.regular-nav').addClass('sticky');
-            $('.logo-box').addClass('js-logo-mobile');
-            $('.navigation_button').addClass('js-nav-backgound'); //icon-mod-mobile tt
-            $('.js-user-icon-1').attr('src', 'img/Icon search.png');
-            $('.js-user-icon-2').attr('src', 'img/Icon heart.png');
-            $('.js-user-icon-3').attr('src', 'img/Icon bag.png');
-            $('.icon-bag-text').addClass('js-user-text');
-
+    /* For the sticky navigation */
+    $('.js-section-grid-image').waypoint(function(direction) {
+        if (direction == "down") {
+            $('header').addClass('sticky');
+            $('.navigation').addClass('sticky');
+            $('.scroll-logo-image').addClass('scroll-logo-image').attr('src','img/Logos.png');
+            $('.header-search-icon').addClass('scroll-search-icon').attr('src','img/Icon search-scroll.png');
+            $('.header-user-tool-heart-icon').addClass('scroll-heart-icon').attr('src','img/Icon heart-scroll.png');
+            $('.header-user-tool-bag-icon').addClass('scroll-bag-icon').attr('src','img/Icon bag-scroll.png');
         } else {
-            $('.regular-nav').removeClass('sticky');
-            $('.logo-box').removeClass('js-logo-mobile');
-            $('.navigation_button').removeClass('js-nav-backgound');
-            $('.js-user-icon-1').attr('src', 'img/Icon search-white.png');
-            $('.js-user-icon-2').attr('src', 'img/Icon heart-white.png');
-            $('.js-user-icon-3').attr('src', 'img/Icon bag-white.png');
-            $('.icon-bag-text').removeClass('js-user-text');
+            $('header').removeClass('sticky');
+            $('.navigation').removeClass('sticky');
+            $('.scroll-logo-image').addClass('scroll-logo-image').attr('src','img/Logof.png');
+            $('.header-search-icon').addClass('scroll-search-icon').attr('src','img/Icon search11.png');
+            $('.header-user-tool-heart-icon').addClass('scroll-heart-icon').attr('src','img/heart-icon.png');
+            $('.header-user-tool-bag-icon').addClass('scroll-bag-icon').attr('src','img/Icon bag11.png');
+        
         }
     }, {
-        offset: '25%'
+      offset: '60px;'
     });
-
 });

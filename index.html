@@ -4,291 +4,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>4BOUTIQUE</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>4boutique</title>
 </head>
 
 <body>
 
     <div class="navigation">
         <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation_button">
-            <span class="navigation_icon">&nbsp;</span>
+        <label for="navi-toggle" class="navigation-button ">
+            <span class="navigation-icon">&nbsp;</span>
         </label>
-        <div class="navigation_background">&nbsp;</div>
+        <div class="navigation_background"></div>
         <nav class="navigation_nav">
-            <div class="navigation-logo-box">
-                <img src="img/Logo-menu.png" alt="logo" class="navigation-logo">
+            <div class="logo-menu">
+                <img src="img/Logo-menu.png" />
             </div>
-            <div class="navigation-user-icon">
-                <ul class="navigation-user-icon-list">
-                    <li>
-                        <a><img src="img/Icon search-menu.png" alt="user-icon-search" class="navigation-icon-mod navigation-icon-mod-t1 navigation-icon-mobile-menu-search"></a>
-                    </li>
-                    <li>
-                        <a><img src="img/Icon heart-menu.png" alt="user-icon-heart" class="navigation-icon-mod navigation-icon-mod-t1"></a>
-                    </li>
-                    <li>
-                        <a><img src="img/Icon bag-menu.png" alt="user-icon-bag" class="navigation-icon-mod"></a>
-                        <div class="navigation-icon-bag-text">(2)</div>
-                    </li>
-                </ul>
+            <div class="search-menu">
+                <img src="img/Icon search-gold.png" />
+            </div>
+            <div class="heart-menu">
+                <img src="img/Icon heart-gold.png" />
+            </div>
+            <div class="bag-menu">
+                <img src="img/Icon bag-gold.png" />
+                <span class="bag-menu-text">( 2 )</span>
+            </div>
+            <div class="menu-user-tool">
+                <div class="row menu">
+                    <div class="col-1-0f-3 menu">
+                        <div class="menu-user-tool-item border">
+                            <div class="menu-user-tool-item-icon active">
+                                <img src="img/Icon lock.png" />
+                            </div>
+                            <h3 class="menu-user-tool-item-text">account</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-0f-3 menu">
+                        <div class="menu-user-tool-item border">
+                            <div class="menu-user-tool-item-icon">
+                                <img src="img/Icon bag1.png" />
+                                <h3 class="menu-user-tool-item-bag-notification">2</h3>
+                            </div>
+                            <h3 class="menu-user-tool-item-text">bag</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-0f-3 menu">
+                        <div class="menu-user-tool-item save">
+                            <div class="menu-user-tool-item-icon">
+                                <img src="img/Icon heart1.png" />
+                            </div>
+                            <h3 class="menu-user-tool-item-text">save</h3>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <ul class="navigation_list">
-                <li class="navigation_item item-section-divider">
-                    <a href="#" class="navigation_link">
-                        <img src="img/Mobile User tool.png" alt="menu-user-tool" class="user-tool-box">
-                    </a>
+                <li class="navigation_item-bottom"><a href="#" class="navigation_link navigation-active">Home</a>
                 </li>
-                <li class="navigation_item item-section-divider">
-                    <a href="#" class="navigation_link">HOME</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">READY TO WEAR</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">WOMEN</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">MEN</a>
-                </li>
-                <li class="navigation_item item-section-divider">
-                    <a href="#" class="navigation_link">DESIGNERS</a>
-                </li>
-                <li class="navigation_item item-section-divider">
-                    <a href="#" class="navigation_link">LOOKBOOK</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">BLOG</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">ABOUT</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#" class="navigation_link">CONTACT</a>
-                </li>
-                <li class="navigation-newsletter">LANGUAGE: <span class="temp-gray">ENGLISH</span>
-                    <img src="img/Shape.png" alt="arrow-shape" class="links-arrow">
-                </li>
-                <li class="navigation-newsletter-2">STORE LOCATOR</li>
-                <li class="navigation-newsletter-box">NEWSLETTER</li>
-                <li class="navigation-newsletter-box">
-                    <input type="email" name="email" placeholder="Email">
-                    <a href="#" class="navigation-newsletter-input-submission">
-                        <img src="img/Icon arrows slim right-black.png" alt="submission-arrow" class="navigation-newsletter-input-submission-arrow">
-                    </a>
-                </li>
-                <div class="nav-logo-div">
-                    <li class="navigation-logo-social"><img src="img/Icon facebook.png" alt="facebook-logo" class="navigation-social-icons-img"> </li>
-                    <li class="navigation-logo-social"><img src="img/Icon twitter.png" alt="twitter-logo" class="navigation-social-icons-img"> </li>
-                    <li class="navigation-logo-social"><img src="img/Icon google plus.png" alt="gplus-logo" class="navigation-social-icons-img"> </li>
-                    <li class="navigation-logo-social"><img src="img/Icon tumblr.png" alt="tumblr-logo" class="navigation-social-icons-img"> </li>
-                </div>
+                <li class="navigation_item"><a href="#" class="navigation_link">Ready to wear</a></li>
+                <li class="navigation_item"><a href="#" class="navigation_link">women</a></li>
+                <li class="navigation_item"><a href="#" class="navigation_link">men</a></li>
+                <li class="navigation_item-bottom"><a href="#" class="navigation_link">designers</a></li>
+                <li class="navigation_item-bottom"><a href="#" class="navigation_link">lookbook</a></li>
+                <li class="navigation_item"><a href="#" class="navigation_link">blog</a></li>
+                <li class="navigation_item"><a href="#" class="navigation_link">about</a></li>
+                <li class="navigation_item"><a href="#" class="navigation_link">contact</a></li>
             </ul>
+
+            <div class="menu-links">
+                <a href="#" class="language">
+                    Language:<span class="language-english"> english</span>
+                        <span class="arrow-icon"><img src="img/Icon arrow down.png" /></span>
+                    
+                </a>
+                <a href="#" class="store-locator">store locator</a>
+            </div>
+
+            <div class="newsletter">
+                <a href="" class="newsletter-text">newsletter</a>
+                <input type="text" placeholder="Email"><span class="arrow">&rarr;</span>
+            </div>
+
+            <div class="social">
+                <ul class="social-icon-list">
+                    <li class="social-icon-list-item">
+                        <a href="#"><img src="img/Icon facebook.png" /></a>
+                    </li>
+                    <li class="social-icon-list-item">
+                        <a href="#"><img src="img/Icon twitter.png" /></a>
+                    </li>
+                    <li class="social-icon-list-item">
+                        <a href="#"><img src="img/Icon google plus.png" /></a>
+                    </li>
+                    <li class="social-icon-list-item">
+                        <a href="#"><img src="img/Icon tumblr.png" /></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+
+    </div>
+    <header class="sticky">
+        <div class="header">
+            <ul class="header-mobile-menu">
+                <li class="header-search">
+                    <a href="#"><img src="img/Icon search11.png" class="header-search-icon scroll-search-icon" /></a>
+                </li>
+                <li class="logo">
+                    <a href="#"><img src="img/Logof.png" class="scroll-logo-image" alt="logo" /></a>
+                </li>
+                <li class="header-user-tool header-user-tool-heart">
+                    <a href="#"><img src="img/heart-icon.png"
+                            class="header-user-tool-heart-icon scroll-heart-icon" /></a>
+                </li>
+                <li class="header-user-tool header-user-tool-bag">
+                    <a href="#"><img src="img/Icon bag11.png" class="header-user-tool-bag-icon scroll-bag-icon" /></a>
+                </li>
+                <li class="header-user-tool header-user-tool-notification">
+                    <span class="header-user-tool header-user-tool-notification-text">( 2 )</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="slider">
+
+        <div class="slider-text-area">
+            <h1 class="slider-text-area-text">new f/w 2015 collection</h1>
+            <h3 class="slider-text-area-tab-port-text">
+                NULLA VITAE ELIT LIBERO, A PHARETRA AUGUE MOLLIS INTERDUM.
+            </h3>
+            <a href="#" class="btn slider-btn">shop now</a>
+        </div>
+
+        <div class="slider-indicators">
+            <ul class="slider-indicators-list-all">
+                <li class="indicator indicator-active"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+                <li class="indicator"></li>
+            </ul>
+        </div>
+
+        <div class="slider-icon-arrow-down">
+            <a href="#"><img src="img/Icon arrow downf.png" /></a>
+        </div>
+
     </div>
 
-    <header class="main-nav">
-        <nav class="regular-nav" id="dynamic">
-            <div class="logo-box">
-                <img src="img/Logo.png" alt="logo" class="logo">
-                <img src="img/Logo-white.png" alt="logo" class="logo-tab-portrait">
-
-            </div>
-            <div class="user-icon">
-                <ul class="user-icon-list">
-                    <li>
-                        <a><img src="img/Icon search.png" alt="user-icon-search" class="icon-mod icon-mod-t1"></a>
-                        <a><img src="img/Icon search-white.png" alt="user-icon-search" class="icon-mod icon-mod-t1 icon-mod-tab-port icon-mod-mobile js-user-icon-1"></a>
-                    </li>
-                    <li>
-                        <a><img src="img/Icon heart.png" alt="user-icon-heart" class="icon-mod icon-mod-t1"></a>
-                        <a><img src="img/Icon heart-white.png" alt="user-icon-heart" class="icon-mod icon-mod-t1 icon-mod-tab-port js-user-icon-2"></a>
-                    </li>
-                    <li>
-                        <a><img src="img/Icon bag.png" alt="user-icon-bag" class="icon-mod"></a>
-                        <a><img src="img/Icon bag-white.png" alt="user-icon-bag" class="icon-mod icon-mod-tab-port js-user-icon-3"></a>
-                        <div class="icon-bag-text">(2)</div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- grid image -->
     <main>
-        <section class="main-content">
-            <div class="row scroll">
-                <div class="col-1-of-1-custom image-slider">
-                    <div class="slider-text-box">
-                        <div><span class="slider-text-box-header">NEW F/W 2015 COLLECTION</span>
-                            <span class="slider-text-box-detail">NULLA VITAE ELIT LIBERO, A PHARETRA AUGUE MOLLIS INTERDUM</span>
+        <section class="section-grid-image js-section-grid-image">
+            <div class="grid-image-row">
+                <div class="col-1-of-2-big-image">
+                    <div class="big-image">
+                        <h1 class="big-image-text">
+                            get into the new season's mood
+                        </h1>
+                        <a href="#" class="btn grid-image-btn big-image-btn">shop now</a>
+                    </div>
+                </div>
+
+                <div class="col-1-of-2-big-image-aside">
+                    <div class="big-image-aside-1">
+                        <div class="big-image-aside-1-image">
+                            <h1 class="big-image-aside-1-text">
+                                the weekend wonder
+                            </h1>
+                            <a href="#" class="btn grid-image-btn aside-1-btn">shop now</a>
                         </div>
-                        <a href="#" class="btn-content-sliding">BUTTON</a>
-                        <div class="slider-text-box-indicator">
-                            <img src="img/Indicators Horizonal.png" alt="indicator" class="slide-indicator">
-                        </div>
-                        <div class="slider-text-box-arrow">
-                            <img src="img/Icon arrow down.png" alt="indicator" class="slide-arrow">
+                    </div>
+
+                    <div class="big-image-aside-2">
+                        <div class="big-image-aside-2-image">
+                            <h1 class="big-image-aside-2-text">
+                                the best autumn buys
+                            </h1>
+                            <a href="#" class="btn grid-image-btn aside-2-btn">shop now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-1-of-2-custom image-big js--sticky">
-                    <div class="text-box">
-                        <div>GET INTO THE
-                            <br>NEW SEASON’S MOOD</div>
-                        <a href="#" class="btn-content-large">SHOP NOW</a>
-                    </div>
-                </div>
-                <div class="col-2-of-2-custom">
-                    <div class="row">
-                        <div class="col-1-of-1 image-big-aside-1">
-                            <div class="text-box">
-                                <div>THE WEEKEND WONDER</div>
-                                <a href="#" class="btn-content-aside-1">SHOP MEN</a>
+
+            <div class="grid-image-row">
+                <div class="col-1-of-3-square-image">
+                    <div class="square-image">
+                        <div class="image-square-1">
+                            <div class="image-square-1-image">
+                                <h1 class="image-square-1-text">
+                                    shop women's new in
+                                </h1>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1-of-1 image-big-aside-2">
-                            <div class="text-box">
-                                <div>THE BEST<br>AUTUMN BUYS</div>
-                                <a href="#" class="btn-content-aside-2">SHOP WOMEN</a>
+                </div>
+
+                <div class="col-1-of-3-square-image">
+                    <div class="square-image">
+                        <div class="image-square-2">
+                            <div class="image-square-2-image">
+                                <h1 class="image-square-2-text">
+                                    shop men's new in
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-of-3-square-image">
+                    <div class="square-image">
+                        <div class="image-square-3">
+                            <div class="image-square-3-image">
+                                <h1 class="image-square-3-text">
+                                    want to pack the city escape
+                                </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-1-of-3  image-square image-square-1">
-                    <div class="image-square-text-box image-square-text-box-1">SHOP WOMEN’S<br>NEW IN</div>
-                </div>
-                <div class="col-1-of-3 image-square image-square-2">
-                    <div class="image-square-text-box image-square-text-box-2">SHOP MEN’S<br>NEW IN</div>
-                </div>
-                <div class="col-1-of-3 image-square image-square-3">
-                    <div class="image-square-text-box image-square-text-box-3">WANT TO PACK<br>THE CITY ESCAPE</div>
+
+        </section>
+
+        <section class="section-footer">
+            <div class="back-to-top">
+                <div class="back-to-top-link">
+                    <img src="img/Icon arrow circle up.png" />
+                    <a href="#"><span class="back-to-top-link-text">back to top</span></a>
                 </div>
             </div>
+            <div class="footer-links">
+                <ul class="footer-links-list">
+                    <li class="footer-links-list-item">faqs</li>
+                    <li class="footer-links-list-item">privacy policy</li>
+                    <li class="footer-links-list-item">terms & conditions</li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <h3 class="copyright-text">&copy; 2015 4boutique theme. all rights reserved</h3>
+            </div>
         </section>
-        <section class="sidebar">
-            <section class="nav-bar">
-                <ul class="nav-list nav-list-section-1">
-                    <li>
-                        <a href="#" class="btn-nav">
-                    HOME
-                </a>
-                    </li>
-                </ul>
-
-                <ul class="nav-list nav-list-section-break">
-                    <li>
-                        <a href="#" class="btn-nav">
-                    READY TO WEAR
-                </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-nav">
-                    WOMEN
-                </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-nav">
-                    MEN
-                </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-nav">
-                    DESIGNERS
-                </a>
-                    </li>
-                </ul>
-
-                <ul class="nav-list nav-list-section-break">
-                    <li>
-                        <a href="#" class="btn-nav">
-                    LOOKBOOK
-                </a>
-                    </li>
-                </ul>
-
-                <ul class="nav-list nav-list-section-break">
-                    <li>
-                        <a href="#" class="btn-nav">
-                    BLOG
-                </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-nav">
-                    ABOUT
-                </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-nav">
-                    CONTACT
-                </a>
-                    </li>
-
-                </ul>
-            </section>
-            <section class="links">
-                <div class="links-header">
-                    <div class="links-header-item">
-                        LANGUAGE: <span class="temp-gray">ENGLISH</span>
-                        <img src="img/Shape.png" alt="arrow-shape" class="links-arrow">
-                    </div>
-                    <div class="links-header-item">STORE LOCATOR</div>
-
-                </div>
-            </section>
-
-            <section class="newletter">
-                <div class="newsletter-box">
-                    NEWSLETTER
-                </div>
-                <div class="newsletter-input">
-                    <input type="email" name="email" placeholder="Email">
-                    <div>
-                        <a href="#" class="newsletter-input-submission">
-                            <img src="img/Icon arrows slim right.png" alt="submission-arrow" class="newsletter-input-submission-arrow">
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section class="social">
-                <div class="social-icons"></div>
-                <ul class="social-icons-list">
-                    <li><img src="img/Icon facebook.png" alt="facebook-logo" class="social-icons-img"> </li>
-                    <li><img src="img/Icon twitter.png" alt="twitter-logo" class="social-icons-img"> </li>
-                    <li><img src="img/Icon google plus.png" alt="gplus-logo" class="social-icons-img"> </li>
-                    <li><img src="img/Icon tumblr.png" alt="tumblr-logo" class="social-icons-img"> </li>
-                </ul>
-                </div>
-            </section>
-
-        </section>
-        <section class="footer-section">
-            <hr class="divider">
-            <footer class="footer-content">
-                <span class="footer-content-copyright">© 2015 4BOUTIQUE THEME. ALL RIGHTS RESERVED.</span>
-                <span class="footer-content-links"> 
-                    <ul class="footer-content-links-list">
-                        <li class="footer-content-links-list-1">FAQS</li>
-                        <li class="footer-content-links-list-1">PRIVACY POLICY</li>
-                        <li class="footer-content-links-list-2">TERMS & CONDITIONS</li>
-                    </ul>
-                </span>
-            </footer>
-        </section>
-
     </main>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -1,23 +1,16 @@
 {
-    "name": "4boutique",
-    "version": "1.0.0",
-    "description": "This is a part of the assesment of Spring Rain Pvt Ltd, 4boutique project",
-    "main": "index.js",
-    "scripts": {
-        "compile:sass": "node-sass sass/main.scss css/style.css -w"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/masudurHimel/SpringRain-4boutique-Index.git"
-    },
-    "author": "Md. Masudur Rahman",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/masudurHimel/SpringRain-4boutique-Index/issues"
-    },
-    "homepage": "https://github.com/masudurHimel/SpringRain-4boutique-Index#readme",
-    "dependencies": {},
-    "devDependencies": {
-        "node-sass": "^4.14.1"
-    }
+  "name": "4boutique",
+  "version": "1.0.0",
+  "description": "Landing page for mobile-portrait",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "Mouri",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+
 }

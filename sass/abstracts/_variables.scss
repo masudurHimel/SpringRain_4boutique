@@ -1,25 +1,11 @@
-//fluid value
-$content-width: calc(100% - 230px);
-$content-height: calc(100vh - 60px);
-//absolute value
-// $content-width: 1150px;
-// $content-height: 840px;
-// $body-width:1440px;
-// $body-height:900px;
-$body-width:1440px;
-$body-height:900px;
-//GRID
-//absolute value
-$gutter-vertical: 30px;
-$gutter-horizontal: 30px;
-// $content-box-height-1: 30px
-//fluid value
-// $gutter-vertical: calc(100% * 0.026);
-// $gutter-horizontal: calc(100% * 0.026);
-//Content
-$image-big-1-width: calc(100% *0.57);
-$image-big-aside-width: calc((100%-#{$gutter-horizontal})*0.43);
-//content-image-text-box
-$image-big-text-box-top:calc(#{$content-height} * 0.2);
-$image-big-aside-text-box-top:calc(#{$content-height} * 0.06);
-$image-big-aside-text-2-box-top:calc(#{$content-height} * 0.375);
+// colors
+
+$color-primary: #333333;
+$color-white: #ffffff;
+$color-secondary: #c8a985;
+$gray-color: #999999;
+// grid
+
+$grid-width: 35rem;
+$gutter-vertical: 4rem;
+$gutter-horizontal: 3rem;
