@@ -79,6 +79,10 @@
         font-style: normal;
         font-weight: normal;
         text-transform: uppercase;
+        @include respond(tab-port) {
+            width: 65%;
+            left: 55%;
+        }
     }
     &-aside-1 {
         @include respond(tab-land) {
@@ -212,6 +216,11 @@
                 position: absolute;
                 bottom: 0%;
             }
+            @include respond(tab-port) {
+                margin-top: 75%;
+                width: 75%;
+                margin-left: 10%;
+            }
         }
     }
     .image-square-2 {
@@ -254,6 +263,9 @@
                 position: absolute;
                 bottom: 0%;
             }
+            @include respond(tab-port) {
+                margin-top: 75%;
+            }
         }
     }
     .image-square-3 {
@@ -295,6 +307,11 @@
                 margin-right: 15%;
                 position: absolute;
                 bottom: 0%;
+            }
+            @include respond(tab-port) {
+                margin-top: 75%;
+                width: 80%;
+                margin-left: 12%;
             }
         }
     }

@@ -155,6 +155,10 @@
                 // margin-bottom: 3px;
                 margin-top: -4px;
                 height: 28px;
+                @include respond(tab-port) {
+                    margin-top: 0px;
+                    padding-right: 2px;
+                }
             }
         }
     }
