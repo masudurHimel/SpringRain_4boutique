@@ -1,0 +1,110 @@
+.slider {
+    height: 64rem;
+    width: 100%;
+    background-color: $color-primary;
+    position: relative;
+
+    @include respond(tab-land) {
+        display: none;
+    }
+
+    @include respond(desktop) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        height: 50vh;
+    }
+
+    &-text-area {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &-tab-port-text {
+            display: none;
+
+            @include respond(tab-port) {
+                display: block;
+                color: $color-white;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-text {
+            font-size: 26px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 43px;
+            margin-bottom: 30px;
+
+            @include respond(tab-port) {
+                font-size: 30px;
+                margin-bottom: 10px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &-btn {
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 4px 12px;
+    }
+
+    &-indicators {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-list {
+            &-all {
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin-bottom: 6px;
+                }
+            }
+
+        }
+    }
+
+    &-icon-arrow-down {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.indicator {
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+
+    &:not(:first-child) {
+        margin-bottom: 10px;
+        background-color: $color-white;
+    }
+
+    margin-right: 8px;
+
+    @include respond(tab-port) {
+        margin-right: 12px;
+    }
+
+    &-active {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 10px;
+    }
+}
