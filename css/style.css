@@ -46,7 +46,7 @@ body {
 
 .aside-1-btn {
   position: absolute;
-  top: 65%;
+  top: 67%;
   left: 25%; }
 
 .aside-2-btn {
@@ -475,7 +475,7 @@ body {
     margin-top: 15%;
     margin-left: 40%;
     margin-right: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -509,9 +509,10 @@ body {
 .square-image .image-square-1-text {
   position: relative;
   color: #ffffff;
-  margin-top: 67%;
+  margin-top: 75%;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 10%;
   text-align: center;
   font-size: 24px;
   font-weight: normal;
@@ -526,8 +527,8 @@ body {
       margin-right: 15%; } }
   @media (min-width: 1121px) {
     .square-image .image-square-1-text {
-      margin-left: 15%;
-      margin-right: 15%; } }
+      position: absolute;
+      bottom: 0%; } }
 
 .square-image .image-square-2-image {
   background-color: #f2f2f2;
@@ -548,6 +549,7 @@ body {
   margin-top: 67%;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 10%;
   text-align: center;
   font-size: 24px;
   font-weight: normal;
@@ -562,8 +564,10 @@ body {
       margin-right: 15%; } }
   @media (min-width: 1121px) {
     .square-image .image-square-2-text {
-      margin-left: 15%;
-      margin-right: 15%; } }
+      margin-left: 28%;
+      margin-right: 15%;
+      position: absolute;
+      bottom: 0%; } }
 
 .square-image .image-square-3-image {
   background-color: #cccccc;
@@ -584,6 +588,7 @@ body {
   margin-top: 67%;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 10%;
   text-align: center;
   font-size: 24px;
   font-weight: normal;
@@ -598,8 +603,10 @@ body {
       top: 70%; } }
   @media (min-width: 1121px) {
     .square-image .image-square-3-text {
-      margin-left: 15%;
-      margin-right: 15%; } }
+      margin-left: 23%;
+      margin-right: 15%;
+      position: absolute;
+      bottom: 0%; } }
 
 .header {
   height: 6rem;
