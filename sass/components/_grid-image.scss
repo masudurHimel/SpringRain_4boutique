@@ -75,7 +75,8 @@
     border: 1px solid $color-white;
 
     @include respond(tab-land) {
-        height: 388px;
+        // height: 388px;
+        height: calc(calc(100vh - 60px) * 0.56);
     }
 
     @include respond(desktop) {
@@ -95,6 +96,10 @@
         font-style: normal;
         font-weight: normal;
         text-transform: uppercase;
+        @include respond(tab-port) {
+            width: 65%;
+            left: 55%;
+        }
     }
 
     &-aside-1 {
@@ -108,18 +113,20 @@
 
         &-image {
             background-color: $color-secondary;
-            width: 100%;
-            height: 180px;
+            width: 102.5%;
+            height: calc(((calc(100vh - 60px) * 0.56)/2) - 15px);
             position: relative;
             border: 1px solid $color-white;
 
             @include respond(tab-port) {
+                width: 100%;
                 height: 150px;
             }
 
             @include respond(desktop) {
                 // height: 170px;
                 height: calc(((calc(100vh - 60px) * 0.56)/2) - 9.5px);
+                width: 100%;
             }
         }
 
@@ -155,18 +162,20 @@
 
         &-image {
             background-color: #f0e3cc;
-            width: 100%;
-            height: 180px;
+            width: 102.5%;
+            height: calc(((calc(100vh - 60px) * 0.56)/2) - 15px);
             position: relative;
             border: 1px solid $color-white;
 
             @include respond(tab-port) {
                 height: 150px;
+                width: 100%;
             }
 
             @include respond(desktop) {
                 // height: 170px;
                 height: calc(((calc(100vh - 60px) * 0.56)/2) - 9.5px);
+                width: 100%;
             }
         }
 
@@ -203,7 +212,7 @@
         &-image {
             background-color: #CCCCCC;
             width: 100%;
-            height: 300px;
+            height: calc(calc(100vh - 60px) * 0.40 - 49px);
             position: relative;
             border: 1px solid $color-white;
 
@@ -244,6 +253,11 @@
                 position: absolute;
                 bottom: 0%;
             }
+            @include respond(tab-port) {
+                margin-top: 75%;
+                width: 75%;
+                margin-left: 10%;
+            }
         }
     }
 
@@ -251,7 +265,7 @@
         &-image {
             background-color: #f2f2f2;
             width: 100%;
-            height: 300px;
+            height: calc(calc(100vh - 60px) * 0.40 - 49px);
             position: relative;
             border: 1px solid $color-white;
 
@@ -292,6 +306,9 @@
                 position: absolute;
                 bottom: 0%;
             }
+            @include respond(tab-port) {
+                margin-top: 75%;
+            }
         }
     }
 
@@ -299,7 +316,7 @@
         &-image {
             background-color: #cccccc;
             width: 100%;
-            height: 300px;
+            height: calc(calc(100vh - 60px) * 0.40 - 49px);
             position: relative;
             border: 1px solid $color-white;
 
@@ -339,6 +356,11 @@
                 margin-right: 15%;
                 position: absolute;
                 bottom: 0%;
+            }
+            @include respond(tab-port) {
+                margin-top: 75%;
+                width: 80%;
+                margin-left: 12%;
             }
         }
     }

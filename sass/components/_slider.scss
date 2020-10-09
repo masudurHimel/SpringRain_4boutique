@@ -3,38 +3,35 @@
     width: 100%;
     background-color: $color-primary;
     position: relative;
-
     @include respond(tab-land) {
         display: none;
     }
-
     @include respond(desktop) {
         display: none;
     }
-
     @include respond(tab-port) {
-        height: 60vh;
+        height: 100vh;
     }
-
     &-text-area {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-
+        @include respond(tab-port) {
+            left: 48%;
+        }
         &-tab-port-text {
             display: none;
-
             @include respond(tab-port) {
                 display: block;
                 color: $color-white;
                 text-transform: uppercase;
-                font-size: 12px;
+                font-size: 16px;
                 margin-bottom: 20px;
+                margin-left: 10%;
             }
         }
-
         &-text {
             font-size: 26px;
             font-weight: 400;
@@ -42,23 +39,24 @@
             color: $color-white;
             line-height: 43px;
             margin-bottom: 30px;
-
             @include respond(tab-port) {
-                font-size: 30px;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: normal;
+                width: 111%;
                 margin-bottom: 10px;
-                line-height: 30px;
+                line-height: 37px;
             }
         }
     }
-
     &-btn {
         text-transform: uppercase;
         color: $color-white;
         font-size: 12px;
         font-weight: 400;
         padding: 4px 12px;
+        margin-left: 10%;
     }
-
     &-indicators {
         position: absolute;
         top: 75%;
@@ -66,7 +64,6 @@
         overflow: hidden !important;
         left: 50%;
         transform: translateX(-50%);
-
         &-list {
             &-all {
                 list-style: none;
@@ -75,10 +72,8 @@
                     margin-bottom: 6px;
                 }
             }
-
         }
     }
-
     &-icon-arrow-down {
         position: absolute;
         top: 90%;
@@ -92,18 +87,14 @@
     border-radius: 50%;
     width: 5px;
     height: 5px;
-
     &:not(:first-child) {
         margin-bottom: 10px;
         background-color: $color-white;
     }
-
     margin-right: 8px;
-
     @include respond(tab-port) {
         margin-right: 12px;
     }
-
     &-active {
         width: 15px;
         height: 15px;

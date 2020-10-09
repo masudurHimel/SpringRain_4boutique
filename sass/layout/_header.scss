@@ -8,75 +8,58 @@
     background: $color-primary;
     position: fixed;
     z-index: 100;
-
     @include respond(desktop) {
         margin: 0;
         padding: 0;
         height: 0;
     }
-
     ul {
-
         list-style: none;
-
         @include respond(tab-port) {
             float: right;
         }
-
         @include respond(tab-land) {
             float: right;
         }
     }
-
     li {
-
         display: inline-block;
-
         &:not(:last-child) {
             margin-right: 20px;
-
             @include respond(tab-land) {
                 margin-right: 0;
             }
         }
     }
-
     .logo {
         position: fixed !important;
         left: 50% !important;
         transform: translateX(-50%);
         top: 25px !important;
-
         @include respond(tab-port) {
             position: fixed !important;
             left: 60px !important;
             top: 25px !important;
             transform: translateX(0);
-
         }
-
         @include respond(tab-land) {
             position: fixed !important;
             left: 75px !important;
             top: 25px !important;
             transform: translateX(0);
         }
-
         @include respond(desktop) {
             position: fixed !important;
             left: 40px !important;
             top: 22px !important;
             transform: translateX(0);
         }
-
         img {
             margin-bottom: 5px !important;
         }
     }
-
     &-search {
         margin-left: 4.4rem;
-
         @include respond(tab-port) {
             margin-left: 0;
             margin-right: 5px !important;
@@ -84,7 +67,6 @@
             right: 10%;
             top: 22px;
         }
-
         @include respond(tab-land) {
             margin-left: 0;
             margin-right: 5px !important;
@@ -92,60 +74,48 @@
             right: 10.5%;
             top: 14px;
         }
-
         @include respond(desktop) {
             display: none !important;
         }
-
         img {
             width: 30px;
             height: 30px;
         }
-
     }
-
     &-user-tool {
         margin-right: 0 !important;
-
         &-heart {
             position: fixed;
             right: 10%;
             top: 22px;
             margin-right: 5px !important;
-
             @include respond(tab-port) {
                 right: 6%;
                 top: 24px;
-
                 // margin-left: -15% !important;
             }
-
             @include respond(tab-land) {
                 position: fixed;
                 right: 8%;
                 top: 16px;
                 margin-right: 5px !important;
-
             }
-
             @include respond(desktop) {
                 display: none !important;
             }
-
             img {
-                margin-bottom: 3px;
+                // margin-bottom: 3px;
+                margin-top: -2px;
+                height: 30px;
             }
         }
-
         &-notification {
             position: absolute;
             margin-top: 8px;
             margin-left: -5px;
-
             @include respond(desktop) {
                 display: none !important;
             }
-
             &-text {
                 position: fixed;
                 right: 2%;
@@ -153,13 +123,11 @@
                 font-size: 10px;
                 font-weight: 300;
                 color: $color-white;
-
                 @include respond(tab-port) {
                     font-size: 12px;
                     right: 1%;
                     top: 26px;
                 }
-
                 @include respond(tab-land) {
                     font-size: 12px;
                     margin: 0;
@@ -169,37 +137,35 @@
                 }
             }
         }
-
         &-bag {
             position: fixed;
             right: 5%;
-
             @include respond(desktop) {
                 display: none !important;
             }
-
             @include respond(tab-land) {
                 right: 6%;
                 top: 15px;
             }
-
             @include respond(tab-port) {
                 right: 3%;
                 top: 22px;
             }
-
             img {
-                margin-bottom: 3px;
+                // margin-bottom: 3px;
+                margin-top: -4px;
+                height: 28px;
+                @include respond(tab-port) {
+                    margin-top: 0px;
+                    padding-right: 2px;
+                }
             }
         }
-
     }
-
 }
 
 .sticky .header {
     background-color: white;
-
     .header-user-tool-notification-text {
         color: black;
     }
