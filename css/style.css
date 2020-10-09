@@ -765,7 +765,7 @@ body {
             font-size: 12px;
             margin: 0;
             position: fixed;
-            right: 4.5%;
+            right: 4.2%;
             top: 20px; } }
     .header-user-tool-bag {
       position: fixed;
@@ -782,7 +782,6 @@ body {
           right: 3%;
           top: 22px; } }
       .header-user-tool-bag img {
-        margin-top: -4px;
         height: 28px; }
         @media (min-width: 600px) and (max-width: 768px) {
           .header-user-tool-bag img {
