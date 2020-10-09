@@ -147,7 +147,7 @@ body {
   margin-top: 20%;
   text-align: center; }
   .menu-user-tool {
-    margin-top: 7rem;
+    margin-top: 6rem;
     height: 120px;
     width: 100%;
     border: 1px solid #ffffff;
@@ -313,16 +313,17 @@ body {
     border: 1px solid #ffffff;
     font-size: 22px;
     line-height: 28px;
-    top: 20px;
+    top: 9.5px;
+    display: inline-block;
     position: absolute;
     background-color: #ffffff;
     color: black; }
     @media (min-width: 600px) and (max-width: 768px) {
       .newsletter .arrow {
-        top: 33px; } }
+        top: 16px; } }
     @media (min-width: 769px) and (max-width: 1120px) {
       .newsletter .arrow {
-        top: 33px; } }
+        top: 16px; } }
     @media (min-width: 1121px) {
       .newsletter .arrow {
         top: 22px;
@@ -869,17 +870,17 @@ body {
 
 .navigation_list {
   position: absolute;
-  top: 45%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center; }
   @media (min-width: 600px) and (max-width: 768px) {
     .navigation_list {
-      top: 35%; } }
+      top: 30%; } }
   @media (min-width: 769px) and (max-width: 1120px) {
     .navigation_list {
-      top: 35%; } }
+      top: 30%; } }
   @media (min-width: 1121px) {
     .navigation_list {
       position: fixed;
@@ -1045,7 +1046,16 @@ body {
         display: block; } }
 
 .navigation_item-bottom {
-  margin-bottom: 25px; }
+  margin-bottom: 8px; }
+  @media (min-width: 769px) and (max-width: 1120px) {
+    .navigation_item-bottom {
+      margin-bottom: 15px; } }
+  @media (min-width: 600px) and (max-width: 768px) {
+    .navigation_item-bottom {
+      margin-bottom: 15px; } }
+  @media (min-width: 1121px) {
+    .navigation_item-bottom {
+      margin-bottom: 15px; } }
 
 .sticky .navigation-button {
   background-color: white; }
