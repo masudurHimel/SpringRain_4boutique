@@ -50,16 +50,16 @@
     }
     &_list {
         position: absolute;
-        top: 45%;
+        top: 46%;
         left: 50%;
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
         @include respond(tab-port) {
-            top: 35%;
+            top: 30%;
         }
         @include respond(tab-land) {
-            top: 35%;
+            top: 30%;
         }
         @include respond(desktop) {
             position: fixed;
@@ -248,7 +248,20 @@
 }
 
 .navigation_item-bottom {
-    margin-bottom: 25px;
+    margin-bottom: 8px;
+
+    @include respond(tab-land){
+        margin-bottom: 15px;
+
+    }
+    @include respond(tab-port){
+        margin-bottom: 15px;
+
+    }
+    @include respond(desktop){
+        margin-bottom: 15px;
+
+    }
 }
 
 .sticky {

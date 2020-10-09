@@ -11,7 +11,7 @@
         @include respond(desktop) {
             display: none;
         }
-        margin-top: 7rem;
+        margin-top: 6rem;
         height: 120px;
         width: 100%;
         border: 1px solid $color-white;
@@ -187,12 +187,13 @@
         border: 1px solid $color-white;
         font-size: 22px;
         line-height: 28px;
-        top: 20px;
+        top: 9.5px;
+        display: inline-block;
         @include respond(tab-port) {
-            top: 33px;
+            top: 16px;
         }
         @include respond(tab-land) {
-            top: 33px;
+            top: 16px;
         }
         @include respond(desktop) {
             top: 22px;
