@@ -165,7 +165,7 @@
                     margin: 0;
                     position: fixed;
                     right: 4.5%;
-                    top: 2.5%;
+                    top: 20px;
                 }
             }
         }
@@ -180,7 +180,7 @@
 
             @include respond(tab-land) {
                 right: 6%;
-                top: 2%;
+                top: 15px;
             }
 
             @include respond(tab-port) {

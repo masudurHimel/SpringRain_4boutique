@@ -59,7 +59,7 @@ body {
       display: none; } }
   @media (min-width: 600px) and (max-width: 768px) {
     .slider {
-      height: 50vh; } }
+      height: 60vh; } }
   .slider-text-area {
     position: absolute;
     top: 50%;
@@ -96,6 +96,8 @@ body {
   .slider-indicators {
     position: absolute;
     top: 75%;
+    margin-top: 15px;
+    overflow: hidden !important;
     left: 50%;
     transform: translateX(-50%); }
     .slider-indicators-list-all {
@@ -439,7 +441,6 @@ body {
     @media (min-width: 600px) and (max-width: 768px) {
       .big-image-aside-1-text {
         margin-bottom: 10px;
-        font-size: 20px;
         line-height: 20px; } }
   @media (min-width: 769px) and (max-width: 1024px) {
     .big-image-aside-2 {
@@ -497,7 +498,8 @@ body {
 .square-image .image-square-1-text {
   position: relative;
   color: #ffffff;
-  margin-top: 50%;
+  top: 50%;
+  margin-bottom: 10px;
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
@@ -532,7 +534,8 @@ body {
 .square-image .image-square-2-text {
   position: relative;
   color: #ffffff;
-  margin-top: 50%;
+  top: 50%;
+  margin-bottom: 10px;
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
@@ -567,7 +570,8 @@ body {
 .square-image .image-square-3-text {
   position: relative;
   color: #ffffff;
-  margin-top: 50%;
+  top: 50%;
+  margin-bottom: 10px;
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
@@ -710,7 +714,7 @@ body {
             margin: 0;
             position: fixed;
             right: 4.5%;
-            top: 2.5%; } }
+            top: 20px; } }
     .header-user-tool-bag {
       position: fixed;
       right: 5%; }
@@ -720,7 +724,7 @@ body {
       @media (min-width: 769px) and (max-width: 1024px) {
         .header-user-tool-bag {
           right: 6%;
-          top: 2%; } }
+          top: 15px; } }
       @media (min-width: 600px) and (max-width: 768px) {
         .header-user-tool-bag {
           right: 3%;
@@ -812,7 +816,7 @@ body {
 
 .navigation_list {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;

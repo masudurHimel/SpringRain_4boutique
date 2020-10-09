@@ -13,7 +13,7 @@
     }
 
     @include respond(tab-port) {
-        height: 50vh;
+        height: 60vh;
     }
 
     &-text-area {
@@ -62,6 +62,8 @@
     &-indicators {
         position: absolute;
         top: 75%;
+        margin-top: 15px;
+        overflow: hidden !important;
         left: 50%;
         transform: translateX(-50%);
 
