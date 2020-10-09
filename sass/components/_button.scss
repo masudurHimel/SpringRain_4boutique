@@ -24,12 +24,19 @@
     top: 60%;
     left: 44%;
     transform: translateX(-50%);
+    @include respond(mobile) {
+        left: 49%;
+    }
 }
 
 .aside-1-btn {
     position: absolute;
     top: 67%;
     left: 25%;
+    @include respond(mobile) {
+        left: 16%;
+        top: 58%;
+    }
 }
 
 .aside-2-btn {

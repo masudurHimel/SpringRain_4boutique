@@ -8,6 +8,11 @@
 
 //media queries
 @mixin respond($breakpoint) {
+    @if $breakpoint==mobile {
+        @media (max-width: 599px) {
+            @content
+        }
+    }
     @if $breakpoint==tab-port {
         @media (min-width: 600px) and (max-width: 768px) {
             @content
