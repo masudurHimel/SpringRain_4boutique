@@ -186,6 +186,9 @@
                 margin-right: 8px;
                 margin-top: 10%;
             }
+            @include respond(tab-land) {
+                margin-top: 10%;
+            }
             @include respond(mobile) {
                 font-size: 20px;
                 line-height: 23px;
