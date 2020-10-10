@@ -4,7 +4,7 @@
     "description": "Landing page for mobile-portrait",
     "main": "index.js",
     "scripts": {
-        "compile:sass": "node-sass sass/main.scss css/style.css",
+        "compile:sass": "node-sass sass/main.scss css/style.css -w",
         "watch-css": "nodemon -e scss -x \"npm run compile:sass\""
     },
     "author": "Mouri",

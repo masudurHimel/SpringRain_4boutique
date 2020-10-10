@@ -321,7 +321,8 @@ body {
     @media (min-width: 1121px) {
       .newsletter input[type=text] {
         border: 1px solid #CCCCCC;
-        color: #CCCCCC; } }
+        color: #CCCCCC;
+        width: 84%; } }
   .newsletter .arrow {
     border: 1px solid #ffffff;
     font-size: 22px;
