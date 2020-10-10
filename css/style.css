@@ -82,7 +82,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    z-index: 999; }
     @media (min-width: 600px) and (max-width: 768px) {
       .slider-text-area {
         left: 48%; } }
@@ -95,7 +96,8 @@ body {
           text-transform: uppercase;
           font-size: 16px;
           margin-bottom: 20px;
-          margin-left: 10%; } }
+          margin-left: 10%;
+          z-index: 999; } }
     .slider-text-area-text {
       font-size: 32px;
       font-style: normal;
@@ -122,39 +124,105 @@ body {
       .slider-btn {
         margin-left: 10%; } }
   .slider-indicators {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     position: absolute;
-    top: 75%;
-    margin-top: 15px;
-    overflow: hidden !important;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translate(-50%, -50%); }
     .slider-indicators-list-all {
-      list-style: none; }
-      .slider-indicators-list-all li {
-        display: inline-block;
-        margin-bottom: 6px; }
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex; }
   .slider-icon-arrow-down {
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translateX(-50%); }
 
+/*
 .indicator {
-  border: 1px solid #ffffff;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    &:not(:first-child) {
+        margin-bottom: 10px;
+        background-color: $color-white;
+    }
+    margin-right: 8px;
+    @include respond(tab-port) {
+        margin-right: 12px;
+    }
+    &-active {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 10px;
+    }
+}
+*/
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex; }
+  .slides-img {
+    width: 20%;
+    transition: 0.6s; }
+    .slides-img-container-1 {
+      width: 100%;
+      height: 100%;
+      background-color: #333333; }
+    .slides-img-container-2 {
+      width: 100%;
+      height: 100%;
+      background-color: black; }
+    .slides-img-container-3 {
+      width: 100%;
+      height: 100%;
+      background-color: grey; }
+    .slides-img-container-4 {
+      width: 100%;
+      height: 100%;
+      background-color: #c8a985; }
+    .slides-img-container-5 {
+      width: 100%;
+      height: 100%;
+      background-color: #ac75; }
+
+.indicator {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  margin-right: 8px; }
-  .indicator:not(:first-child) {
-    margin-bottom: 10px;
-    background-color: #ffffff; }
-  @media (min-width: 600px) and (max-width: 768px) {
-    .indicator {
-      margin-right: 12px; } }
-  .indicator-active {
-    width: 15px;
-    height: 15px;
-    margin-bottom: 10px; }
+  border: 2px solid #fff;
+  background-color: #ffffff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s; }
+
+.indicator:hover {
+  background-color: #fff; }
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden; }
+
+#r1:checked ~ .s1 {
+  margin-left: 0; }
+
+#r2:checked ~ .s1 {
+  margin-left: -20%; }
+
+#r3:checked ~ .s1 {
+  margin-left: -40%; }
+
+#r4:checked ~ .s1 {
+  margin-left: -60%; }
+
+#r5:checked ~ .s1 {
+  margin-left: -80%; }
 
 .menu {
   margin-top: 20%;
