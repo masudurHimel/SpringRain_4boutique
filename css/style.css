@@ -244,18 +244,27 @@ input[name="r"] {
         display: none; } }
     .menu-user-tool .border {
       border-right: 1px solid #ffffff !important; }
+      @media (max-width: 349px) {
+        .menu-user-tool .border {
+          margin-top: -68px; } }
     .menu-user-tool-item {
       margin-left: -4px;
       margin-top: -70px;
       height: 120px;
       width: 100px;
       position: relative; }
+      @media (max-width: 349px) {
+        .menu-user-tool-item {
+          margin-left: -14px; } }
       .menu-user-tool-item .active {
         margin-left: 20px !important; }
       .menu-user-tool-item-icon img {
         position: absolute;
         margin-top: 40px;
         margin-left: -20px; }
+      @media (max-width: 349px) {
+        .menu-user-tool-item .trial-heart-menu {
+          margin-top: 7px; } }
       .menu-user-tool-item-text {
         position: absolute;
         margin-top: 80px;

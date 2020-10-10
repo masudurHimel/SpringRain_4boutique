@@ -28,4 +28,9 @@
             @content
         }
     }
+    @if $breakpoint==small-mobile {
+        @media (max-width: 349px) {
+            @content
+        }
+    }
 }

@@ -18,6 +18,9 @@
         background-color: $color-primary;
         .border {
             border-right: 1px solid $color-white !important;
+            @include respond(small-mobile) {
+                margin-top: -68px;
+            }
         }
         &-item {
             margin-left: -4px;
@@ -25,6 +28,9 @@
             height: 120px;
             width: 100px;
             position: relative;
+            @include respond(small-mobile) {
+                margin-left: -14px;
+            }
             .active {
                 margin-left: 20px !important;
             }
@@ -32,6 +38,11 @@
                 position: absolute;
                 margin-top: 40px;
                 margin-left: -20px;
+            }
+            .trial-heart-menu {
+                @include respond(small-mobile) {
+                    margin-top: 7px;
+                }
             }
             &-text {
                 position: absolute;
